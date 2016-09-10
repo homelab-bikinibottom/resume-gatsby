@@ -43,7 +43,7 @@
         <!-- <div class="offset-lg-2 col-lg-8"> -->
         <div class="col-lg-12">
           <div class="jumbotron">
-            <h1 class="display-3">Hello,</h1>
+            <h1 class="display-3" id="greeting-message" style="color:#eceeef">Hello,</h1>
           </div>
         </div>
       </div>
@@ -416,6 +416,12 @@
             $('#sidebar-wrapper').css('top', 0); 
           }
         }
+      });
+      $().ready(function (){
+        $.getJSON( "https://spondbob.github.io/say-hello/api/en/hello.json", function( data ) {
+          var index = Math.floor((Math.random() * data.length));
+          $( "#greeting-message" ).html( data[index] + "," ).css("color", "").fadeIn(3000);
+        });
       });
     </script>
   </body>
