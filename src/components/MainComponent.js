@@ -5,6 +5,7 @@ import Experience from './sections/Experience';
 import Education from './sections/Education';
 import Projects from './sections/Projects';
 import Volunteer from './sections/Volunteer';
+import SoftSkills from './sections/SoftSkills';
 
 class MainComponent extends Component {
   render() {
@@ -42,6 +43,7 @@ class MainComponent extends Component {
             <Education />
             <Projects />
             <Volunteer />
+            <SoftSkills />
           </div>
           <div className="col-lg-4">
             <Sidebar />
