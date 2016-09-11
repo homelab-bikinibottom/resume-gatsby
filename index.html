@@ -405,24 +405,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript">
-      $(window).on('scroll', function(event) {
-        var windowWidth = $(window).width();
-        if (windowWidth >= 1000) {
-          var scrollValue = $(window).scrollTop();
-          if (scrollValue > 350) {
-            $('#sidebar-wrapper').css('top', scrollValue - 350); 
-          } else {
-            $('#sidebar-wrapper').css('top', 0); 
-          }
-        }
-      });
-      $().ready(function (){
-        $.getJSON( "https://spondbob.github.io/say-hello/api/en/hello.json", function( data ) {
-          var index = Math.floor((Math.random() * data.length));
-          $( "#greeting-message" ).html( data[index] + "," ).css("color", "").fadeIn(3000);
-        });
-      });
-    </script>
+    <script src="my.js"></script>
   </body>
 </html>
