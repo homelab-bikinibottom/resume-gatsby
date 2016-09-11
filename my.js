@@ -11,7 +11,7 @@ $(window).on('scroll', function(event) {
   }
 });
 
-// Request to sa-hello API
+// Request to say-hello API
 $().ready(function (){
   $.getJSON( "https://spondbob.github.io/say-hello/api/en/hello.json", function( data ) {
     var index = Math.floor((Math.random() * data.length));
