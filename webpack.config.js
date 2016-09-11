@@ -1,7 +1,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/src/index.html',
-  filename: __dirname + '/public/index.html',
+  template: __dirname + '/template.html',
+  filename: __dirname + '/index.html',
   inject: 'body'
 });
 
@@ -11,7 +11,7 @@ module.exports = {
   ],
   output: {
     filename: "index_bundle.js",
-    path: __dirname + '/public'
+    path: __dirname
   },
   module: {
     loaders: [{
@@ -32,7 +32,7 @@ module.exports = {
     port: 8080,
     historyApiFallback: {
       // http://jaketrent.com/post/pushstate-webpack-dev-server/
-      index: __dirname + '/public/index.html'
+      index: __dirname + '/index.html'
     }
   }
 }
