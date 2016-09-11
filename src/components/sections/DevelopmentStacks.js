@@ -17,8 +17,8 @@ class DevelopmentStacks extends Component {
                 <p className="card-text">Languages and frameworks.</p>
               </div>
               <div className="list-group list-group-flush">
-                <a href="#" className="list-group-item list-group-item-action">Ruby, <span className="tag tag-primary">Ruby on Rails</span>, Rspec</a>
-                <a href="#" className="list-group-item list-group-item-action"><span className="tag tag-success">PHP</span>, CodeIgniter, Yii</a>
+                <a href="#" className="list-group-item list-group-item-action">Ruby, Ruby on Rails, Rspec</a>
+                <a href="#" className="list-group-item list-group-item-action">PHP, CodeIgniter, Yii</a>
                 <a href="#" className="list-group-item list-group-item-action">Python, Django</a>
                 <a href="#" className="list-group-item list-group-item-action">C#, .NET</a>
                 <a href="#" className="list-group-item list-group-item-action">Java</a>
@@ -34,7 +34,7 @@ class DevelopmentStacks extends Component {
               <div className="list-group list-group-flush">
                 <a href="#" className="list-group-item list-group-item-action">HTML5, CSS, Bootstrap</a>
                 <a href="#" className="list-group-item list-group-item-action">Javascript, jQuery</a>
-                <a href="#" className="list-group-item list-group-item-action">ES2015, CoffeeScript, <span className="tag tag-info">ReactJS</span>, Redux, Node.js, Mocha, Chai</a>
+                <a href="#" className="list-group-item list-group-item-action">ES2015, CoffeeScript, ReactJS, Redux, Node.js, Mocha, Chai</a>
               </div>
             </div>
           </div>
