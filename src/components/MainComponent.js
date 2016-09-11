@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Sidebar from './Sidebar';
+import DevelopmentStacks from './sections/DevelopmentStacks';
 import Experience from './sections/Experience';
 import Education from './sections/Education';
 import Projects from './sections/Projects';
@@ -36,6 +37,7 @@ class MainComponent extends Component {
 
         <div className="row">
           <div className="col-lg-8">
+            <DevelopmentStacks />
             <Experience />
             <Education />
             <Projects />
