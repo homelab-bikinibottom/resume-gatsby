@@ -49,6 +49,13 @@ class MainComponent extends Component {
             <Sidebar />
           </div>
         </div>
+
+        <footer className="footer">
+          <p>
+            &copy; Rizky Noor Ichwan 2016.<br />
+            Layout taken from <a href="http://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/">Bootstrap Examples</a>.
+          </p>
+        </footer>
       </div>
     )
   }
