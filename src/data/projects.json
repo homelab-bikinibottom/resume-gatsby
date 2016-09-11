@@ -1,0 +1,63 @@
+[
+  {
+    "title": "claimgst",
+    "subTitle": "Personal project",
+    "date": "Aug 2016",
+    "descriptions":
+    [
+      "Develop isolated front-end and back-end layer with React and Rails using REST API to communicate.",
+      "Stack: Rails 5, Node.js, ReactJS, Redux, Mocha, Chai, Webpack, PostgreSQL, RESTful API, Bootstrap, Docker"
+    ]
+  },
+    {
+    "title": "VicRun",
+    "subTitle": "Monash University & MYOB",
+    "date": "March - May 2016",
+    "descriptions":
+    [
+      "Developed a RESTful API server with Rails deployed on Azure for the iOS game and website.",
+      "The server was also used to transform PDF/CSV documents into a proper data structure and translating addresses to the actual coordinate using Google Maps API.",
+      "Stack: Rails 4.2, PostgreSQL, Rake, Google Maps API, RESTful API, Bootstrap, Docker, Azure"
+    ]
+  },
+    {
+    "title": "RHSystem",
+    "subTitle": "Personal project",
+    "date": "Aug 2014",
+    "descriptions":
+    [
+      "The first hands-on project with friends to learn Rails with its stacks and how to do testings.",
+      "Stack: Rails 4.2, PostgreSQL, RSpec, Capybara, CoffeeScript, Elasticsearch, Docker, Git"
+    ]
+  },
+  {
+    "title": "Academic Reporting System",
+    "subTitle": "Institut Teknologi Sepuluh Nopember",
+    "date": "March - Oct 2013",
+    "descriptions":
+    [
+      "A simple business intelligence to visualise data into summarised information and graphical trends.",
+      "Stack: PHP, CodeIgniter, Hierarchical MVC, MSSQL, jQuery, Highcharts, Bootstrap, Git"
+    ]
+  },
+    {
+    "title": "Ilaluya",
+    "subTitle": "Multimedia Networks",
+    "date": "Aug 2012",
+    "descriptions":
+    [
+      "A final project assignment to determine traffic density from Twitter crowdsourcing.",
+      "Stack: PHP, CodeIgniter, Twitter API, Google Maps API, Google Fusion Table API"
+    ]
+  },
+    {
+    "title": "CariKos",
+    "subTitle": "Web Design Competition",
+    "date": "Oct 2011",
+    "descriptions":
+    [
+      "An Airbnb-like website to find nearby accommodations developed for Indonesian market.",
+      "Stack: PHP, CodeIgniter, MySQL, jQuery, Google Maps API"
+    ]
+  }
+]

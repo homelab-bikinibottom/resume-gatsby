@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Master of Information Technology Professional/Master of Business Information Systems Professional",
+    "subTitle": "Monash University, Australia",
+    "date": "2014 - 2016",
+    "descriptions":
+    [
+      "Awarded Faculty of IT International Merit Scholarship in 2014.",
+      "Self-development through attending conferences such as Activate Agile and Student Summit at Cisco Live as well as Ruby and Rails Melbourne Meetup."
+    ]
+  },
+  {
+    "title": "Bachelor of Informatics",
+    "subTitle": "Institut Teknologi Sepuluh Nopember, Indonesia",
+    "date": "2009 - 2013",
+    "descriptions":
+    [
+      "Minor: Network Centric Computing",
+      "Thesis: RePlace - Development and Design of Recommender System Based on Mobile User Collaboration Using Profile Matching Mechanism"
+    ]
+  }
+]
