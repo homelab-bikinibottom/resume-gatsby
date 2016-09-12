@@ -21466,19 +21466,19 @@
 
 	var _Experience2 = _interopRequireDefault(_Experience);
 
-	var _Education = __webpack_require__(180);
+	var _Education = __webpack_require__(181);
 
 	var _Education2 = _interopRequireDefault(_Education);
 
-	var _Projects = __webpack_require__(182);
+	var _Projects = __webpack_require__(183);
 
 	var _Projects2 = _interopRequireDefault(_Projects);
 
-	var _Volunteer = __webpack_require__(184);
+	var _Volunteer = __webpack_require__(185);
 
 	var _Volunteer2 = _interopRequireDefault(_Volunteer);
 
-	var _SoftSkills = __webpack_require__(186);
+	var _SoftSkills = __webpack_require__(187);
 
 	var _SoftSkills2 = _interopRequireDefault(_SoftSkills);
 
@@ -21982,7 +21982,7 @@
 
 	var _Section2 = _interopRequireDefault(_Section);
 
-	var _experience = __webpack_require__(179);
+	var _experience = __webpack_require__(180);
 
 	var _experience2 = _interopRequireDefault(_experience);
 
@@ -22100,6 +22100,100 @@
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FaIcon = __webpack_require__(179);
+
+	var _FaIcon2 = _interopRequireDefault(_FaIcon);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SectionItem = function (_Component) {
+	  _inherits(SectionItem, _Component);
+
+	  function SectionItem() {
+	    _classCallCheck(this, SectionItem);
+
+	    return _possibleConstructorReturn(this, (SectionItem.__proto__ || Object.getPrototypeOf(SectionItem)).apply(this, arguments));
+	  }
+
+	  _createClass(SectionItem, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-lg-2' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            this.props.data.date
+	          ),
+	          this.props.data.hasOwnProperty('links') ? this.props.data.links.map(function (link, type) {
+	            return _react2.default.createElement(
+	              'a',
+	              { href: link.url, key: link.type, target: '_blank' },
+	              _react2.default.createElement(_FaIcon2.default, { type: link.type })
+	            );
+	          }) : ""
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-lg-10' },
+	          _react2.default.createElement(
+	            'h4',
+	            null,
+	            this.props.data.title,
+	            ' ',
+	            _react2.default.createElement(
+	              'small',
+	              { className: 'text-muted' },
+	              this.props.data.subTitle
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'ul',
+	            null,
+	            this.props.data.descriptions.map(function (description, key) {
+	              return _react2.default.createElement(
+	                'li',
+	                { key: key },
+	                description
+	              );
+	            })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return SectionItem;
+	}(_react.Component);
+
+	exports.default = SectionItem;
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -22120,67 +22214,42 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var SectionItem = function (_Component) {
-	  _inherits(SectionItem, _Component);
+	var FaIcon = function (_Component) {
+	  _inherits(FaIcon, _Component);
 
-	  function SectionItem() {
-	    _classCallCheck(this, SectionItem);
+	  function FaIcon() {
+	    _classCallCheck(this, FaIcon);
 
-	    return _possibleConstructorReturn(this, (SectionItem.__proto__ || Object.getPrototypeOf(SectionItem)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (FaIcon.__proto__ || Object.getPrototypeOf(FaIcon)).apply(this, arguments));
 	  }
 
-	  _createClass(SectionItem, [{
+	  _createClass(FaIcon, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "row" },
-	        _react2.default.createElement(
-	          "div",
-	          { className: "col-lg-2" },
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            this.props.data.date
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "col-lg-10" },
-	          _react2.default.createElement(
-	            "h4",
-	            null,
-	            this.props.data.title,
-	            " ",
-	            _react2.default.createElement(
-	              "small",
-	              { className: "text-muted" },
-	              this.props.data.subTitle
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "ul",
-	            null,
-	            this.props.data.descriptions.map(function (description, key) {
-	              return _react2.default.createElement(
-	                "li",
-	                { key: key },
-	                description
-	              );
-	            })
-	          )
-	        )
-	      );
+	      var chosenIcon = "";
+	      switch (this.props.type) {
+	        case "github":
+	          chosenIcon = "fa-github-alt";
+	          break;
+	        default:
+	          chosenIcon = "fa-globe";
+	          break;
+	      }
+	      return _react2.default.createElement("i", { className: "fa fa-border fa-lg " + chosenIcon });
 	    }
 	  }]);
 
-	  return SectionItem;
+	  return FaIcon;
 	}(_react.Component);
 
-	exports.default = SectionItem;
+	FaIcon.propTypes = {
+	  type: _react.PropTypes.string.isRequired
+	};
+
+	exports.default = FaIcon;
 
 /***/ },
-/* 179 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -22203,6 +22272,12 @@
 				"Developed a reporting system to monitor 7.3M customers’ electricity usage in East Java area.",
 				"Process the data in Access using a C#.NET-based application then export it to MySQL and display it as a graphical trend on a CodeIgniter-based website.",
 				"Discuss and collaborate with the IT Department for design and implementation of the system to make sure its compatibility with existing systems."
+			],
+			"links": [
+				{
+					"type": "website",
+					"url": "http://www.pln.co.id/"
+				}
 			]
 		},
 		{
@@ -22210,16 +22285,22 @@
 			"subTitle": "City of Surabaya & Institut Teknologi Sepuluh Nopember",
 			"date": "March - June 2011",
 			"descriptions": [
-				"An annual project of the city of Surabaya in collaboration with Institut Teknologi Sepuluh Nopember to manage online admission process for all publicschools in Surabaya.",
+				"Did a project of the city of Surabaya in collaboration with Institut Teknologi Sepuluh Nopember to manage online admission process for all public schools in Surabaya.",
 				"Main responsibility includes development of multi-level users for its back-end as well as front-end based on PHP Yii Framework and MySQL that served more than 50,000 users.",
 				"Work agile with database and network engineers to deploy new features on distributed servers.",
 				"Working casually during the semester and did a similar project for the city of Sidoarjo in 2010."
+			],
+			"links": [
+				{
+					"type": "website",
+					"url": "http://ppdbsurabaya.net/"
+				}
 			]
 		}
 	];
 
 /***/ },
-/* 180 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22238,7 +22319,7 @@
 
 	var _Section2 = _interopRequireDefault(_Section);
 
-	var _education = __webpack_require__(181);
+	var _education = __webpack_require__(182);
 
 	var _education2 = _interopRequireDefault(_education);
 
@@ -22279,7 +22360,7 @@
 	exports.default = Education;
 
 /***/ },
-/* 181 */
+/* 182 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -22304,7 +22385,7 @@
 	];
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22323,7 +22404,7 @@
 
 	var _Section2 = _interopRequireDefault(_Section);
 
-	var _projects = __webpack_require__(183);
+	var _projects = __webpack_require__(184);
 
 	var _projects2 = _interopRequireDefault(_projects);
 
@@ -22364,7 +22445,7 @@
 	exports.default = Projects;
 
 /***/ },
-/* 183 */
+/* 184 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -22375,6 +22456,12 @@
 			"descriptions": [
 				"Develop isolated front-end and back-end layer with React and Rails using REST API to communicate.",
 				"Stack: Rails 5, Node.js, ReactJS, Redux, Mocha, Chai, Webpack, PostgreSQL, RESTful API, Bootstrap, Docker"
+			],
+			"links": [
+				{
+					"type": "github",
+					"url": "https://github.com/claimgst"
+				}
 			]
 		},
 		{
@@ -22385,6 +22472,16 @@
 				"Developed a RESTful API server with Rails deployed on Azure for the iOS game and website.",
 				"The server was also used to transform PDF/CSV documents into a proper data structure and translating addresses to the actual coordinate using Google Maps API.",
 				"Stack: Rails 4.2, PostgreSQL, Rake, Google Maps API, RESTful API, Bootstrap, Docker, Azure"
+			],
+			"links": [
+				{
+					"type": "website",
+					"url": "http://vicrun.tk"
+				},
+				{
+					"type": "github",
+					"url": "https://github.com/team-expert"
+				}
 			]
 		},
 		{
@@ -22394,6 +22491,12 @@
 			"descriptions": [
 				"The first hands-on project with friends to learn Rails with its stacks and how to do testings.",
 				"Stack: Rails 4.2, PostgreSQL, RSpec, Capybara, CoffeeScript, Elasticsearch, Docker, Git"
+			],
+			"links": [
+				{
+					"type": "github",
+					"url": "https://bitbucket.org/plummy/rhsystem"
+				}
 			]
 		},
 		{
@@ -22412,6 +22515,12 @@
 			"descriptions": [
 				"A final project assignment to determine traffic density from Twitter crowdsourcing.",
 				"Stack: PHP, CodeIgniter, Twitter API, Google Maps API, Google Fusion Table API"
+			],
+			"links": [
+				{
+					"type": "website",
+					"url": "http://ilaluya.eamca.com/"
+				}
 			]
 		},
 		{
@@ -22421,12 +22530,22 @@
 			"descriptions": [
 				"An Airbnb-like website to find nearby accommodations developed for Indonesian market.",
 				"Stack: PHP, CodeIgniter, MySQL, jQuery, Google Maps API"
+			],
+			"links": [
+				{
+					"type": "website",
+					"url": "http://carikos.eamca.com/"
+				},
+				{
+					"type": "github",
+					"url": "https://github.com/spondbob/carikos"
+				}
 			]
 		}
 	];
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22445,7 +22564,7 @@
 
 	var _Section2 = _interopRequireDefault(_Section);
 
-	var _volunteer = __webpack_require__(185);
+	var _volunteer = __webpack_require__(186);
 
 	var _volunteer2 = _interopRequireDefault(_volunteer);
 
@@ -22486,7 +22605,7 @@
 	exports.default = Volunteer;
 
 /***/ },
-/* 185 */
+/* 186 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -22498,6 +22617,12 @@
 				"Volunteering for its annual event of workshops, conference, and social event.",
 				"Assist RSpec++ workshop and help the conference by guiding attendees throughout the event.",
 				"Improving Ruby knowledge by being able to follow the 2-days talk and RSpec++ workshop."
+			],
+			"links": [
+				{
+					"type": "website",
+					"url": "http://rubyconf.org.au/2015"
+				}
 			]
 		},
 		{
@@ -22507,12 +22632,18 @@
 			"descriptions": [
 				"Working in a team to help attendees with general enquiries, organise and locating name tags for registration, collecting feedback for speakers, and guiding attendees through the venue.",
 				"Sit-in on several talks during off-duty and was assigned to assist Lean Software Development workshop added new learning experience."
+			],
+			"links": [
+				{
+					"type": "website",
+					"url": "http://melbourne.yowconference.com.au/"
+				}
 			]
 		}
 	];
 
 /***/ },
-/* 186 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22531,7 +22662,7 @@
 
 	var _Section2 = _interopRequireDefault(_Section);
 
-	var _softSkills = __webpack_require__(187);
+	var _softSkills = __webpack_require__(188);
 
 	var _softSkills2 = _interopRequireDefault(_softSkills);
 
@@ -22572,7 +22703,7 @@
 	exports.default = SoftSkills;
 
 /***/ },
-/* 187 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = [
