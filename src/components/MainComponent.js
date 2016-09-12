@@ -18,10 +18,10 @@ class MainComponent extends Component {
                 <a className="nav-link active" href="#">Resume <span className="sr-only">(current)</span></a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="http://eamca.com">About</a>
+                <a className="nav-link" href="http://eamca.com" target="_blank">About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="http://blog.eamca.com">Blog</a>
+                <a className="nav-link" href="http://blog.eamca.com" target="_blank">Blog</a>
               </li>
             </ul>
           </nav>
@@ -53,7 +53,7 @@ class MainComponent extends Component {
         <footer className="footer">
           <p>
             &copy; Rizky Noor Ichwan 2016.<br />
-            Layout taken from <a href="http://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/">Bootstrap Examples</a>.
+            Layout taken and modified from <a href="http://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/" target="_blank">Bootstrap Examples</a>.
           </p>
         </footer>
       </div>

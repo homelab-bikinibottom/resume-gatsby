@@ -8,8 +8,8 @@ class Sidebar extends Component {
           <div className="card-block">
             <h3 className="card-title">Rizky Noor Ichwan</h3>
             <p className="card-text">Web developer enthusiast based in Melbourne, Australia.</p>
-            <a href="http://github.eamca.com" className="card-link">GitHub</a>
-            <a href="http://linkedin.eamca.com" className="card-link">LinkedIn</a>
+            <a href="http://github.eamca.com" className="card-link" target="_blank">GitHub</a>
+            <a href="http://linkedin.eamca.com" className="card-link" target="_blank">LinkedIn</a>
             <a href="mailto:hi@eamca.com" className="btn btn-primary pull-xs-right">Send email</a>
           </div>
         </div>
