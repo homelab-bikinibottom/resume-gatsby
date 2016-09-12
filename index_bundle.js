@@ -21819,49 +21819,45 @@
 	            { className: "col-lg-4" },
 	            _react2.default.createElement(
 	              "div",
-	              { className: "card" },
+	              { className: "list-group" },
 	              _react2.default.createElement(
 	                "div",
-	                { className: "card-block" },
+	                { className: "list-group-item list-group-item-action active" },
 	                _react2.default.createElement(
-	                  "h4",
-	                  { className: "card-title" },
+	                  "h5",
+	                  { className: "list-group-item-heading" },
 	                  "Back-end"
 	                ),
 	                _react2.default.createElement(
 	                  "p",
-	                  { className: "card-text" },
+	                  { className: "list-group-item-text" },
 	                  "Languages and frameworks."
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "div",
-	                { className: "list-group list-group-flush" },
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "Ruby, Ruby on Rails, Rspec"
-	                ),
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "PHP, CodeIgniter, Yii"
-	                ),
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "Python, Django"
-	                ),
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "C#, .NET"
-	                ),
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "Java"
-	                )
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "Ruby, Ruby on Rails, Rspec"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "PHP, CodeIgniter, Yii"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "Python, Django"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "C#, .NET"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "Java"
 	              )
 	            )
 	          ),
@@ -21870,39 +21866,35 @@
 	            { className: "col-lg-4" },
 	            _react2.default.createElement(
 	              "div",
-	              { className: "card" },
+	              { className: "list-group" },
 	              _react2.default.createElement(
 	                "div",
-	                { className: "card-block" },
+	                { className: "list-group-item list-group-item-action active" },
 	                _react2.default.createElement(
-	                  "h4",
-	                  { className: "card-title" },
+	                  "h5",
+	                  { className: "list-group-item-heading" },
 	                  "Front-end"
 	                ),
 	                _react2.default.createElement(
 	                  "p",
-	                  { className: "card-text" },
+	                  { className: "list-group-item-text" },
 	                  "Scripting and styling."
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "div",
-	                { className: "list-group list-group-flush" },
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "HTML5, CSS, Bootstrap"
-	                ),
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "Javascript, jQuery"
-	                ),
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "ES2015, CoffeeScript, ReactJS, Redux, Node.js, Mocha, Chai"
-	                )
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "HTML5, CSS, Bootstrap"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "Javascript, jQuery"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "ES2015, CoffeeScript, ReactJS, Redux, Node.js, Mocha, Chai"
 	              )
 	            )
 	          ),
@@ -21911,44 +21903,40 @@
 	            { className: "col-lg-4" },
 	            _react2.default.createElement(
 	              "div",
-	              { className: "card" },
+	              { className: "list-group" },
 	              _react2.default.createElement(
 	                "div",
-	                { className: "card-block" },
+	                { className: "list-group-item list-group-item-action active" },
 	                _react2.default.createElement(
-	                  "h4",
-	                  { className: "card-title" },
+	                  "h5",
+	                  { className: "list-group-item-heading" },
 	                  "Supports"
 	                ),
 	                _react2.default.createElement(
 	                  "p",
-	                  { className: "card-text" },
+	                  { className: "list-group-item-text" },
 	                  "Databases, operating systems, and tools."
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "div",
-	                { className: "list-group list-group-flush" },
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "MySQL, MSSQL, PostgreSQL, MongoDB"
-	                ),
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "Windows, OS X, Linux (Debian, Ubuntu, ArchLinux, and openSUSE)"
-	                ),
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "Docker, Slack, Trello, Webpack, Travis CI"
-	                ),
-	                _react2.default.createElement(
-	                  "a",
-	                  { href: "#", className: "list-group-item list-group-item-action" },
-	                  "Android Development and RESTful API"
-	                )
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "MySQL, MSSQL, PostgreSQL, MongoDB"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "Windows, OS X, Linux (Debian, Ubuntu, ArchLinux, and openSUSE)"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "Docker, Slack, Trello, Webpack, Travis CI"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "list-group-item list-group-item-action" },
+	                "Android Development and RESTful API"
 	              )
 	            )
 	          )
