@@ -8,6 +8,13 @@
       "Volunteering for its annual event of workshops, conference, and social event.",
       "Assist RSpec++ workshop and help the conference by guiding attendees throughout the event.",
       "Improving Ruby knowledge by being able to follow the 2-days talk and RSpec++ workshop."
+    ],
+    "links":
+    [
+      {
+        "type": "website",
+        "url": "http://rubyconf.org.au/2015"
+      }
     ]
   },
   {
@@ -18,6 +25,13 @@
     [
       "Working in a team to help attendees with general enquiries, organise and locating name tags for registration, collecting feedback for speakers, and guiding attendees through the venue.",
       "Sit-in on several talks during off-duty and was assigned to assist Lean Software Development workshop added new learning experience."
+    ],
+    "links":
+    [
+      {
+        "type": "website",
+        "url": "http://melbourne.yowconference.com.au/"
+      }
     ]
   }
 ]

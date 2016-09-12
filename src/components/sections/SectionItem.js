@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FaIcon from '../FaIcon';
 
 class SectionItem extends Component {
   render() {
@@ -6,6 +7,17 @@ class SectionItem extends Component {
       <div className="row">
         <div className="col-lg-2">
           <p>{this.props.data.date}</p>
+          {
+            this.props.data.hasOwnProperty('links')
+            ? this.props.data.links.map(function(link, type) {
+                return (
+                  <a href={link.url} key={link.type} target="_blank">
+                    <FaIcon type={link.type} />
+                  </a>
+                )
+              })
+            : ""
+          }
         </div>
         <div className="col-lg-10">
           <h4>

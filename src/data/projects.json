@@ -7,6 +7,13 @@
     [
       "Develop isolated front-end and back-end layer with React and Rails using REST API to communicate.",
       "Stack: Rails 5, Node.js, ReactJS, Redux, Mocha, Chai, Webpack, PostgreSQL, RESTful API, Bootstrap, Docker"
+    ],
+    "links":
+    [
+      { 
+        "type": "github",
+        "url": "https://github.com/claimgst"
+      }
     ]
   },
     {
@@ -18,6 +25,17 @@
       "Developed a RESTful API server with Rails deployed on Azure for the iOS game and website.",
       "The server was also used to transform PDF/CSV documents into a proper data structure and translating addresses to the actual coordinate using Google Maps API.",
       "Stack: Rails 4.2, PostgreSQL, Rake, Google Maps API, RESTful API, Bootstrap, Docker, Azure"
+    ],
+    "links":
+    [
+      { 
+        "type": "website",
+        "url": "http://vicrun.tk"
+      },
+      { 
+        "type": "github",
+        "url": "https://github.com/team-expert"
+      }
     ]
   },
     {
@@ -28,6 +46,13 @@
     [
       "The first hands-on project with friends to learn Rails with its stacks and how to do testings.",
       "Stack: Rails 4.2, PostgreSQL, RSpec, Capybara, CoffeeScript, Elasticsearch, Docker, Git"
+    ],
+    "links":
+    [
+      { 
+        "type": "github",
+        "url": "https://bitbucket.org/plummy/rhsystem"
+      }
     ]
   },
   {
@@ -48,6 +73,13 @@
     [
       "A final project assignment to determine traffic density from Twitter crowdsourcing.",
       "Stack: PHP, CodeIgniter, Twitter API, Google Maps API, Google Fusion Table API"
+    ],
+    "links":
+    [
+      { 
+        "type": "website",
+        "url": "http://ilaluya.eamca.com/"
+      }
     ]
   },
     {
@@ -58,6 +90,17 @@
     [
       "An Airbnb-like website to find nearby accommodations developed for Indonesian market.",
       "Stack: PHP, CodeIgniter, MySQL, jQuery, Google Maps API"
+    ],
+    "links":
+    [
+      { 
+        "type": "website",
+        "url": "http://carikos.eamca.com/"
+      },
+      { 
+        "type": "github",
+        "url": "https://github.com/spondbob/carikos"
+      }
     ]
   }
 ]
