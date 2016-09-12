@@ -8,7 +8,10 @@ class SectionItem extends Component {
           <p>{this.props.data.date}</p>
         </div>
         <div className="col-lg-10">
-          <h4>{this.props.data.title} <small className="text-muted">{this.props.data.subTitle}</small></h4>
+          <h4>
+            {this.props.data.title}
+            <small className="text-muted">{this.props.data.subTitle}</small>
+          </h4>
           <ul>
           {
             this.props.data.descriptions.map(function(description, key) {
