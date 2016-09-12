@@ -21,8 +21,7 @@ class SectionItem extends Component {
         </div>
         <div className="col-lg-10">
           <h4>
-            {this.props.data.title}&nbsp;
-            <small className="text-muted">{this.props.data.subTitle}</small>
+            {this.props.data.title} <small className="text-muted">{this.props.data.subTitle}</small>
           </h4>
           <ul>
           {
