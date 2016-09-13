@@ -16,7 +16,7 @@
       }
     ]
   },
-    {
+  {
     "title": "VicRun",
     "subTitle": "Monash University & MYOB",
     "date": "March - May 2016",
@@ -38,7 +38,7 @@
       }
     ]
   },
-    {
+  {
     "title": "RHSystem",
     "subTitle": "Personal project",
     "date": "Aug 2014",
@@ -65,7 +65,24 @@
       "Stack: PHP, CodeIgniter, Hierarchical MVC, MSSQL, jQuery, Highcharts, Bootstrap, Git"
     ]
   },
-    {
+  {
+    "title": "RePlace",
+    "subTitle": "Undergraduate research project",
+    "date": "March - July 2013",
+    "descriptions":
+    [
+      "Developed a Django-based API service to perform recommender algorithms for the Android app.",
+      "Stack: Python, Django, MySQL, Android, RESTful API, Git"
+    ],
+    "links":
+    [
+      {
+        "type": "github",
+        "url": "https://github.com/spondbob/replace"
+      }
+    ]
+  },
+  {
     "title": "Ilaluya",
     "subTitle": "Multimedia Networks",
     "date": "Aug 2012",
@@ -82,7 +99,7 @@
       }
     ]
   },
-    {
+  {
     "title": "CariKos",
     "subTitle": "Web Design Competition",
     "date": "Oct 2011",
