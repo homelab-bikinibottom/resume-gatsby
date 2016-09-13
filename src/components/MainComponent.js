@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import Sidebar from './Sidebar';
 import DevelopmentStacks from './sections/DevelopmentStacks';
-import Experience from './sections/Experience';
-import Education from './sections/Education';
-import Projects from './sections/Projects';
-import Volunteer from './sections/Volunteer';
+import SectionWrapper from './sections/SectionWrapper';
 import SoftSkills from './sections/SoftSkills';
 
 class MainComponent extends Component {
@@ -39,10 +36,10 @@ class MainComponent extends Component {
         <div className="row">
           <div className="col-lg-8">
             <DevelopmentStacks />
-            <Experience />
-            <Education />
-            <Projects />
-            <Volunteer />
+            <SectionWrapper title="Experience" id="experience" const="EXPERIENCE" />
+            <SectionWrapper title="Education" id="education" const="EDUCATION" />
+            <SectionWrapper title="Projects" id="projects" const="PROJECTS" />
+            <SectionWrapper title="Volunteer" id="volunteer" const="VOLUNTEER" />
             <SoftSkills />
           </div>
           <div className="col-lg-4">
