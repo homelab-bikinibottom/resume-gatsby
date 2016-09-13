@@ -5,7 +5,7 @@ class FaIcon extends Component {
     let chosenIcon = "";
     switch(this.props.type){
       case "github":
-        chosenIcon = "fa-github-alt";
+        chosenIcon = "fa-github";
       break;
       default:
         chosenIcon = "fa-globe"
