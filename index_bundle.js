@@ -23654,18 +23654,19 @@
 	            ),
 	            _react2.default.createElement(
 	              "a",
-	              { href: "http://github.eamca.com", className: "card-link", target: "_blank" },
-	              "GitHub"
+	              { href: "http://github.eamca.com", className: "card-link", target: "_blank", alt: "GitHub page" },
+	              _react2.default.createElement("i", { className: "fa fa-github fa-2x" })
 	            ),
 	            _react2.default.createElement(
 	              "a",
-	              { href: "http://linkedin.eamca.com", className: "card-link", target: "_blank" },
-	              "LinkedIn"
+	              { href: "http://linkedin.eamca.com", className: "card-link", target: "_blank", alt: "LinkedIn Profile" },
+	              _react2.default.createElement("i", { className: "fa fa-linkedin fa-2x" })
 	            ),
 	            _react2.default.createElement(
 	              "a",
 	              { href: "mailto:hi@eamca.com", className: "btn btn-primary pull-xs-right" },
-	              "Send email"
+	              _react2.default.createElement("i", { className: "fa fa-envelope" }),
+	              " Send email"
 	            )
 	          )
 	        ),
@@ -24241,7 +24242,7 @@
 	      var chosenIcon = "";
 	      switch (this.props.type) {
 	        case "github":
-	          chosenIcon = "fa-github-alt";
+	          chosenIcon = "fa-github";
 	          break;
 	        default:
 	          chosenIcon = "fa-globe";
@@ -24463,6 +24464,21 @@
 			"descriptions": [
 				"A simple business intelligence to visualise data into summarised information and graphical trends.",
 				"Stack: PHP, CodeIgniter, Hierarchical MVC, MSSQL, jQuery, Highcharts, Bootstrap, Git"
+			]
+		},
+		{
+			"title": "RePlace",
+			"subTitle": "Undergraduate research project",
+			"date": "March - July 2013",
+			"descriptions": [
+				"Developed a Django-based API service to perform recommender algorithms for the Android app.",
+				"Stack: Python, Django, MySQL, Android, RESTful API, Git"
+			],
+			"links": [
+				{
+					"type": "github",
+					"url": "https://github.com/spondbob/replace"
+				}
 			]
 		},
 		{
