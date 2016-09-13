@@ -6,7 +6,7 @@
     "descriptions":
     [
       "Develop isolated front-end and back-end layer with React and Rails using REST API to communicate.",
-      "Stack: Rails 5, Node.js, ReactJS, Redux, Mocha, Chai, Webpack, PostgreSQL, RESTful API, Bootstrap, Docker"
+      "Stack: Rails 5, Node.js, ReactJS, Webpack, Mocha, PostgreSQL, RESTful API, Bootstrap, Docker"
     ],
     "links":
     [
