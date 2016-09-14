@@ -2,6 +2,28 @@ import React, { Component } from 'react';
 import FaIcon from '../FaIcon';
 
 class SectionItem extends Component {
+  title() {
+    return (
+      <h4>
+        {this.props.data.title} <small className="text-muted">{this.props.data.subTitle}</small>
+      </h4>
+    )
+  }
+
+  description() {
+    return (
+      <ul>
+      {
+        this.props.data.descriptions.map(function(description, key) {
+          return (
+            <li key={key}>{description}</li>
+          );
+        })
+      }
+      </ul>
+    )
+  }
+
   render() {
     return (
       <div className="row">
@@ -20,18 +42,8 @@ class SectionItem extends Component {
           }
         </div>
         <div className="col-lg-10">
-          <h4>
-            {this.props.data.title} <small className="text-muted">{this.props.data.subTitle}</small>
-          </h4>
-          <ul>
-          {
-            this.props.data.descriptions.map(function(description, key) {
-              return (
-                <li key={key}>{description}</li>
-              );
-            })
-          }
-          </ul>
+          { this.props.data.title ? this.title() : '' }
+          { this.description() }
         </div>
       </div>
     )
