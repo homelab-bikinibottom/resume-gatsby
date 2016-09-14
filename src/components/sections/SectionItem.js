@@ -54,9 +54,9 @@ class SectionItem extends Component {
           <p>{this.props.data.date}</p>
           {
             this.props.data.hasOwnProperty('links')
-            ? this.props.data.links.map(function(link, type) {
+            ? this.props.data.links.map(function(link, key) {
                 return (
-                  <a href={link.url} key={link.type} target="_blank">
+                  <a href={link.url} key={key} target="_blank">
                     <FaIcon type={link.type} />
                   </a>
                 )
