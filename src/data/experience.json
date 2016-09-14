@@ -12,7 +12,70 @@
     ],
     "type": "univerity"
   },
-    {
+  {
+    "title": "Co Founder",
+    "subTitle": "plummy",
+    "date": "2014 - 2016",
+    "descriptions":
+    [
+      "A digital online platform to collaborate, innovate, and realizing ideas within its small team.",
+      "As a start-up, has been pitched its first idea on Indigo Incubator 2014.",
+      "Successfully delivered first product-on-request to client in mid-2014.",
+      "Developed skills in project management, founding start-up, Ruby on Rails, and DevOps."
+    ],
+    "type": "commercial",
+    "links":
+    [
+      {
+        "type": "website",
+        "url": "http://plummy.web.id"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/plummy"
+      }
+    ]
+  },
+  {
+    "title": "Laboratory Administrator",
+    "subTitle": "Faculty of IT",
+    "date": "2011 - 2013",
+    "descriptions":
+    [
+      "Lab administrator at Computer Architecture and Network Laboratory.",
+      "Did minor research and collaborate with colleagues for some projects.",
+      "Major tasks cover computer, network, and service maintenance to make sure the lab is ready for upcoming workshops, tutorials, and other events."
+    ],
+    "type": "university",
+    "links":
+    [
+      {
+        "type": "website",
+        "url": "http://ajk.if.its.ac.id/"
+      }
+    ]
+  },
+  {
+    "title": "Assistant/Tutor",
+    "subTitle": "Faculty of IT",
+    "date": "2011 - 2013",
+    "descriptions":
+    [
+      "Assitant lecturer for Distributed Systems and Network Programming units.",
+      "Lab tutor for Operating Systems and Computer Networks units.",
+      "Major tasks include guide students through the materials and develop unit contents.",
+      "Being lead tutor for Operating Systems workshop also responsible for planning and execution of the workshops through the semester."
+    ],
+    "type": "university",
+    "links":
+    [
+      {
+        "type": "website",
+        "url": "http://if.its.ac.id/en/"
+      }
+    ]
+  },
+  {
     "title": "Internship",
     "subTitle": "PT. PLN (State Electricity Company of Indonesia)",
     "date": "Aug - Oct 2012",
@@ -31,7 +94,7 @@
       }
     ]
   },
-    {
+  {
     "title": "Web Developer",
     "subTitle": "City of Surabaya & Institut Teknologi Sepuluh Nopember",
     "date": "March - June 2011",
