@@ -59,6 +59,18 @@
     ]
   },
   {
+    "title": "POS Application",
+    "subTitle": "plummy",
+    "date": "July 2014",
+    "descriptions":
+    [
+      "Developed a custom Point of Sales software for a customer in Bali.",
+      "Working remotely as main developer to provide software development and database design.",
+      "Stack: C# .NET, NHibernate, MySQL, Trello, Bitbucket"
+    ],
+    "type": "commercial"
+  },
+  {
     "title": "Academic Reporting System",
     "subTitle": "Institut Teknologi Sepuluh Nopember",
     "date": "March - Oct 2013",

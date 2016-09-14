@@ -25,7 +25,7 @@ class SectionItem extends Component {
   }
 
   type() {
-    let className = "success"
+    let className = "primary"
     let label = "University"
     switch(this.props.data.type) {
       case "personal":
@@ -33,7 +33,7 @@ class SectionItem extends Component {
         label = "Personal"
         break;
       case "commercial":
-        className = "primary"
+        className = "success"
         label = "Commercial"
         break;
       case "competition":
