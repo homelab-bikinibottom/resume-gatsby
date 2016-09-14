@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Sidebar from './Sidebar';
 import DevelopmentStacks from './sections/DevelopmentStacks';
 import SectionWrapper from './sections/SectionWrapper';
-import SoftSkills from './sections/SoftSkills';
 
 class MainComponent extends Component {
   render() {
@@ -40,7 +39,7 @@ class MainComponent extends Component {
             <SectionWrapper title="Education" id="education" const="EDUCATION" />
             <SectionWrapper title="Projects" id="projects" const="PROJECTS" />
             <SectionWrapper title="Volunteer" id="volunteer" const="VOLUNTEER" />
-            <SoftSkills />
+            <SectionWrapper title="Soft Skills" id="soft-skills" const="SOFT_SKILLS" />
           </div>
           <div className="col-lg-4">
             <Sidebar />

@@ -3,6 +3,7 @@ import experienceData from '../data/experience';
 import educationData from '../data/education';
 import projectsData from '../data/projects';
 import volunteerData from '../data/volunteer';
+import softSkillsData from '../data/soft-skills';
 
 export const importData = (section, data) => {
   return {
@@ -26,6 +27,9 @@ export const loadData = (section) => {
         break;
       case "VOLUNTEER":
         return volunteerData
+        break;
+      case "SOFT_SKILLS":
+        return softSkillsData
         break;
     }
   })()
