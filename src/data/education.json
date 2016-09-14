@@ -11,7 +11,7 @@
     "links":
     [
       {
-        "type": "website",
+        "type": "globe",
         "url": "http://www.monash.edu/"
       }
     ]
@@ -28,8 +28,12 @@
     "links":
     [
       {
-        "type": "website",
+        "type": "globe",
         "url": "http://its.ac.id/"
+      },
+      {
+        "type": "book",
+        "url": "http://digilib.its.ac.id/ITS-Undergraduate-51001150004977/35418"
       }
     ]
   }

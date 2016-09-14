@@ -10,7 +10,18 @@
       "Mentored by MYOB with conducting UX testing experiments and final retrospective at the end.",
       "Developed effective communication in a cross-cultural team and to stakeholders, agile practices, and applying industry standard settings."
     ],
-    "type": "univerity"
+    "type": "univerity",
+    "links":
+    [
+      { 
+        "type": "globe",
+        "url": "http://vicrun.tk"
+      },
+      { 
+        "type": "apple",
+        "url": "https://appsto.re/au/Fna4bb.i"
+      }
+    ]
   },
   {
     "title": "Co Founder",
@@ -27,7 +38,7 @@
     "links":
     [
       {
-        "type": "website",
+        "type": "globe",
         "url": "http://plummy.web.id"
       },
       {
@@ -50,7 +61,7 @@
     "links":
     [
       {
-        "type": "website",
+        "type": "globe",
         "url": "http://ajk.if.its.ac.id/"
       }
     ]
@@ -70,7 +81,7 @@
     "links":
     [
       {
-        "type": "website",
+        "type": "globe",
         "url": "http://if.its.ac.id/en/"
       }
     ]
@@ -89,7 +100,7 @@
     "links":
     [
       {
-        "type": "website",
+        "type": "globe",
         "url" : "http://www.pln.co.id/"
       }
     ]
@@ -109,7 +120,7 @@
     "links":
     [
       {
-        "type": "website",
+        "type": "globe",
         "url": "http://ppdbsurabaya.net/"
       }
     ]

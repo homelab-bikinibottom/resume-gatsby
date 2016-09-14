@@ -31,10 +31,6 @@
     "links":
     [
       { 
-        "type": "website",
-        "url": "http://vicrun.tk"
-      },
-      { 
         "type": "github",
         "url": "https://github.com/team-expert"
       }
@@ -80,7 +76,14 @@
       "It was designed as a modular system to easily attach new modules onto it for a new dimension of information.",
       "Stack: PHP, CodeIgniter, Hierarchical MVC, MSSQL, jQuery, Highcharts, Bootstrap, Git"
     ],
-    "type": "commercial"
+    "type": "commercial",
+    "links":
+    [
+      {
+        "type": "globe",
+        "url": "http://its.ac.id/"
+      }
+    ]
   },
   {
     "title": "RePlace",
@@ -97,6 +100,10 @@
       {
         "type": "github",
         "url": "https://github.com/spondbob/replace"
+      },
+      {
+        "type": "android",
+        "url": "https://github.com/spondbob/replace/tree/master/client"
       }
     ]
   },
@@ -113,7 +120,7 @@
     "links":
     [
       { 
-        "type": "website",
+        "type": "globe",
         "url": "http://ilaluya.eamca.com/"
       }
     ]
@@ -132,7 +139,7 @@
     "links":
     [
       { 
-        "type": "github",
+        "type": "android",
         "url": "https://github.com/spondbob/bluetooth"
       },
       { 
@@ -173,7 +180,7 @@
     "links":
     [
       { 
-        "type": "website",
+        "type": "globe",
         "url": "http://riset.ajk.if.its.ac.id/apps/"
       }
     ]
@@ -192,7 +199,7 @@
     "links":
     [
       { 
-        "type": "website",
+        "type": "globe",
         "url": "http://carikos.eamca.com/"
       },
       { 
@@ -214,7 +221,7 @@
     "links":
     [
       { 
-        "type": "website",
+        "type": "globe",
         "url": "http://endeavour.eamca.com/"
       }
     ]
@@ -233,7 +240,7 @@
     "links":
     [
       { 
-        "type": "website",
+        "type": "globe",
         "url": "http://click.eamca.com/"
       }
     ]
