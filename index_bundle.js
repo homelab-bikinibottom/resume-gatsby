@@ -23459,10 +23459,6 @@
 
 	var _SectionWrapper2 = _interopRequireDefault(_SectionWrapper);
 
-	var _SoftSkills = __webpack_require__(215);
-
-	var _SoftSkills2 = _interopRequireDefault(_SoftSkills);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23563,7 +23559,8 @@
 	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Education', id: 'education', 'const': 'EDUCATION' }),
 	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Projects', id: 'projects', 'const': 'PROJECTS' }),
 	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Volunteer', id: 'volunteer', 'const': 'VOLUNTEER' }),
-	            _react2.default.createElement(_SoftSkills2.default, null)
+	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Soft Skills', id: 'soft-skills', 'const': 'SOFT_SKILLS' }),
+	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Organisations', id: 'organisations', 'const': 'ORGANISATIONS' })
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -23728,6 +23725,15 @@
 	                "a",
 	                { className: "nav-link", href: "#soft-skills" },
 	                "Soft Skills"
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "li",
+	              { className: "nav-item" },
+	              _react2.default.createElement(
+	                "a",
+	                { className: "nav-link", href: "#organisations" },
+	                "Organisations"
 	              )
 	            )
 	          )
@@ -24147,6 +24153,61 @@
 	  }
 
 	  _createClass(SectionItem, [{
+	    key: 'title',
+	    value: function title() {
+	      return _react2.default.createElement(
+	        'h4',
+	        null,
+	        this.props.data.title,
+	        ' ',
+	        _react2.default.createElement(
+	          'small',
+	          { className: 'text-muted' },
+	          this.props.data.subTitle
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'description',
+	    value: function description() {
+	      return _react2.default.createElement(
+	        'ul',
+	        null,
+	        this.props.data.descriptions.map(function (description, key) {
+	          return _react2.default.createElement(
+	            'li',
+	            { key: key },
+	            description
+	          );
+	        })
+	      );
+	    }
+	  }, {
+	    key: 'type',
+	    value: function type() {
+	      var className = "primary";
+	      var label = "University";
+	      switch (this.props.data.type) {
+	        case "personal":
+	          className = "info";
+	          label = "Personal";
+	          break;
+	        case "commercial":
+	          className = "success";
+	          label = "Commercial";
+	          break;
+	        case "competition":
+	          className = "default";
+	          label = "Competition";
+	          break;
+	      }
+	      return _react2.default.createElement(
+	        'span',
+	        { className: "tag tag-" + className },
+	        label
+	      );
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -24155,15 +24216,16 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-lg-2' },
+	          this.props.data.type ? this.type() : "",
 	          _react2.default.createElement(
 	            'p',
 	            null,
 	            this.props.data.date
 	          ),
-	          this.props.data.hasOwnProperty('links') ? this.props.data.links.map(function (link, type) {
+	          this.props.data.hasOwnProperty('links') ? this.props.data.links.map(function (link, key) {
 	            return _react2.default.createElement(
 	              'a',
-	              { href: link.url, key: link.type, target: '_blank' },
+	              { href: link.url, key: key, target: '_blank' },
 	              _react2.default.createElement(_FaIcon2.default, { type: link.type })
 	            );
 	          }) : ""
@@ -24171,28 +24233,8 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-lg-10' },
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            this.props.data.title,
-	            ' ',
-	            _react2.default.createElement(
-	              'small',
-	              { className: 'text-muted' },
-	              this.props.data.subTitle
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'ul',
-	            null,
-	            this.props.data.descriptions.map(function (description, key) {
-	              return _react2.default.createElement(
-	                'li',
-	                { key: key },
-	                description
-	              );
-	            })
-	          )
+	          this.props.data.title ? this.title() : '',
+	          this.description()
 	        )
 	      );
 	    }
@@ -24239,16 +24281,7 @@
 	  _createClass(FaIcon, [{
 	    key: "render",
 	    value: function render() {
-	      var chosenIcon = "";
-	      switch (this.props.type) {
-	        case "github":
-	          chosenIcon = "fa-github";
-	          break;
-	        default:
-	          chosenIcon = "fa-globe";
-	          break;
-	      }
-	      return _react2.default.createElement("i", { className: "fa fa-border fa-lg " + chosenIcon });
+	      return _react2.default.createElement("i", { className: "fa fa-border fa-lg fa-" + this.props.type });
 	    }
 	  }]);
 
@@ -24292,6 +24325,14 @@
 
 	var _volunteer2 = _interopRequireDefault(_volunteer);
 
+	var _softSkills = __webpack_require__(215);
+
+	var _softSkills2 = _interopRequireDefault(_softSkills);
+
+	var _organisations = __webpack_require__(216);
+
+	var _organisations2 = _interopRequireDefault(_organisations);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
@@ -24319,6 +24360,12 @@
 	      case "VOLUNTEER":
 	        return _volunteer2.default;
 	        break;
+	      case "SOFT_SKILLS":
+	        return _softSkills2.default;
+	        break;
+	      case "ORGANISATIONS":
+	        return _organisations2.default;
+	        break;
 	    }
 	  }();
 	  return function (dispatch) {
@@ -24340,6 +24387,74 @@
 				"As a team leader, controlling the deliverables to be timely shipped with highest quality possible.",
 				"Mentored by MYOB with conducting UX testing experiments and final retrospective at the end.",
 				"Developed effective communication in a cross-cultural team and to stakeholders, agile practices, and applying industry standard settings."
+			],
+			"type": "univerity",
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://vicrun.tk"
+				},
+				{
+					"type": "apple",
+					"url": "https://appsto.re/au/Fna4bb.i"
+				}
+			]
+		},
+		{
+			"title": "Co Founder",
+			"subTitle": "plummy",
+			"date": "2014 - 2016",
+			"descriptions": [
+				"A digital online platform to collaborate, innovate, and realizing ideas within its small team.",
+				"As a start-up, has been pitched its first idea on Indigo Incubator 2014.",
+				"Successfully delivered first product-on-request to client in mid-2014.",
+				"Developed skills in project management, founding start-up, Ruby on Rails, and DevOps."
+			],
+			"type": "commercial",
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://plummy.web.id"
+				},
+				{
+					"type": "github",
+					"url": "https://github.com/plummy"
+				}
+			]
+		},
+		{
+			"title": "Laboratory Administrator",
+			"subTitle": "Faculty of IT",
+			"date": "2011 - 2013",
+			"descriptions": [
+				"Lab administrator at Computer Architecture and Network Laboratory.",
+				"Did minor research and collaborate with colleagues for some projects.",
+				"Major tasks cover computer, network, and service maintenance to make sure the lab is ready for upcoming workshops, tutorials, and other events."
+			],
+			"type": "university",
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://ajk.if.its.ac.id/"
+				}
+			]
+		},
+		{
+			"title": "Assistant/Tutor",
+			"subTitle": "Faculty of IT",
+			"date": "2011 - 2013",
+			"descriptions": [
+				"Assitant lecturer for Distributed Systems and Network Programming units.",
+				"Lab tutor for Operating Systems and Computer Networks units.",
+				"Major tasks include guide students through the materials and develop unit contents.",
+				"Being lead tutor for Operating Systems workshop also responsible for planning and execution of the workshops through the semester."
+			],
+			"type": "university",
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://if.its.ac.id/en/"
+				}
 			]
 		},
 		{
@@ -24351,9 +24466,10 @@
 				"Process the data in Access using a C#.NET-based application then export it to MySQL and display it as a graphical trend on a CodeIgniter-based website.",
 				"Discuss and collaborate with the IT Department for design and implementation of the system to make sure its compatibility with existing systems."
 			],
+			"type": "commercial",
 			"links": [
 				{
-					"type": "website",
+					"type": "globe",
 					"url": "http://www.pln.co.id/"
 				}
 			]
@@ -24368,9 +24484,10 @@
 				"Work agile with database and network engineers to deploy new features on distributed servers.",
 				"Working casually during the semester and did a similar project for the city of Sidoarjo in 2010."
 			],
+			"type": "commercial",
 			"links": [
 				{
-					"type": "website",
+					"type": "globe",
 					"url": "http://ppdbsurabaya.net/"
 				}
 			]
@@ -24389,6 +24506,12 @@
 			"descriptions": [
 				"Awarded Faculty of IT International Merit Scholarship in 2014.",
 				"Self-development through attending conferences such as Activate Agile and Student Summit at Cisco Live as well as Ruby and Rails Melbourne Meetup."
+			],
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://www.monash.edu/"
+				}
 			]
 		},
 		{
@@ -24398,6 +24521,16 @@
 			"descriptions": [
 				"Minor: Network Centric Computing",
 				"Thesis: RePlace - Development and Design of Recommender System Based on Mobile User Collaboration Using Profile Matching Mechanism"
+			],
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://its.ac.id/"
+				},
+				{
+					"type": "book",
+					"url": "http://digilib.its.ac.id/ITS-Undergraduate-51001150004977/35418"
+				}
 			]
 		}
 	];
@@ -24415,6 +24548,7 @@
 				"Develop isolated front-end and back-end layer with React and Rails using REST API to communicate.",
 				"Stack: Rails 5, Node.js, ReactJS, Webpack, Mocha, PostgreSQL, RESTful API, Bootstrap, Docker"
 			],
+			"type": "personal",
 			"links": [
 				{
 					"type": "github",
@@ -24431,11 +24565,8 @@
 				"The server was also used to transform PDF/CSV documents into a proper data structure and translating addresses to the actual coordinate using Google Maps API.",
 				"Stack: Rails 4.2, PostgreSQL, Rake, Google Maps API, RESTful API, Bootstrap, Docker, Azure"
 			],
+			"type": "univerity",
 			"links": [
-				{
-					"type": "website",
-					"url": "http://vicrun.tk"
-				},
 				{
 					"type": "github",
 					"url": "https://github.com/team-expert"
@@ -24450,6 +24581,7 @@
 				"The first hands-on project with friends to learn Rails with its stacks and how to do testings.",
 				"Stack: Rails 4.2, PostgreSQL, RSpec, Capybara, CoffeeScript, Elasticsearch, Docker, Git"
 			],
+			"type": "personal",
 			"links": [
 				{
 					"type": "github",
@@ -24458,12 +24590,31 @@
 			]
 		},
 		{
+			"title": "POS Application",
+			"subTitle": "plummy",
+			"date": "July 2014",
+			"descriptions": [
+				"Developed a custom Point of Sales software for a customer in Bali.",
+				"Working remotely as main developer to provide software development and database design.",
+				"Stack: C# .NET, NHibernate, MySQL, Trello, Bitbucket"
+			],
+			"type": "commercial"
+		},
+		{
 			"title": "Academic Reporting System",
 			"subTitle": "Institut Teknologi Sepuluh Nopember",
 			"date": "March - Oct 2013",
 			"descriptions": [
 				"A simple business intelligence to visualise data into summarised information and graphical trends.",
+				"It was designed as a modular system to easily attach new modules onto it for a new dimension of information.",
 				"Stack: PHP, CodeIgniter, Hierarchical MVC, MSSQL, jQuery, Highcharts, Bootstrap, Git"
+			],
+			"type": "commercial",
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://its.ac.id/"
+				}
 			]
 		},
 		{
@@ -24474,25 +24625,85 @@
 				"Developed a Django-based API service to perform recommender algorithms for the Android app.",
 				"Stack: Python, Django, MySQL, Android, RESTful API, Git"
 			],
+			"type": "univerity",
 			"links": [
 				{
 					"type": "github",
 					"url": "https://github.com/spondbob/replace"
+				},
+				{
+					"type": "android",
+					"url": "https://github.com/spondbob/replace/tree/master/client"
 				}
 			]
 		},
 		{
-			"title": "Ilaluya",
+			"title": "Traffic Density From Twitter",
 			"subTitle": "Multimedia Networks",
 			"date": "Aug 2012",
 			"descriptions": [
 				"A final project assignment to determine traffic density from Twitter crowdsourcing.",
 				"Stack: PHP, CodeIgniter, Twitter API, Google Maps API, Google Fusion Table API"
 			],
+			"type": "univerity",
 			"links": [
 				{
-					"type": "website",
+					"type": "globe",
 					"url": "http://ilaluya.eamca.com/"
+				}
+			]
+		},
+		{
+			"title": "Class Attendance",
+			"subTitle": "Wireless Networks and Mobile Computing",
+			"date": "Feb 2012",
+			"descriptions": [
+				"It aims to automate class attendance using Bluetooth devices by discovering available students' devices.",
+				"The discovered devices will be recorded to represent students' attendance.",
+				"Stack: Android, PHP, CodeIgniter, MySQL"
+			],
+			"type": "univerity",
+			"links": [
+				{
+					"type": "android",
+					"url": "https://github.com/spondbob/bluetooth"
+				},
+				{
+					"type": "github",
+					"url": "https://github.com/spondbob/bluetoothAttendance"
+				}
+			]
+		},
+		{
+			"title": "Nusantara Card Battle",
+			"subTitle": ".NET Framework Programming",
+			"date": "Feb 2012",
+			"descriptions": [
+				"It is a turn-base multiplayer card game based on C# .NET framework.",
+				"Responsible to develop a section of the game where players can manage their card collections and deck then integrate it to the main system.",
+				"Stack: C#.NET, FluentNHibernate, Linq, MySQL"
+			],
+			"type": "univerity",
+			"links": [
+				{
+					"type": "github",
+					"url": "https://github.com/aldoalase/nusantara-card-battle"
+				}
+			]
+		},
+		{
+			"title": "Laboratory Website",
+			"subTitle": "Computer Architecture and Networks Laboratory",
+			"date": "2012",
+			"descriptions": [
+				"A web application to manage laboratory's reservation, inventory administration, and maintenance record services",
+				"Stack: PHP, CodeIgniter, Grocery CRUD, MySQL"
+			],
+			"type": "univerity",
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://riset.ajk.if.its.ac.id/apps/"
 				}
 			]
 		},
@@ -24502,16 +24713,51 @@
 			"date": "Oct 2011",
 			"descriptions": [
 				"An Airbnb-like website to find nearby accommodations developed for Indonesian market.",
+				"Awarded Second Runner-up at Gemastik 5 from Ministry of Education Indonesia.",
 				"Stack: PHP, CodeIgniter, MySQL, jQuery, Google Maps API"
 			],
+			"type": "competition",
 			"links": [
 				{
-					"type": "website",
+					"type": "globe",
 					"url": "http://carikos.eamca.com/"
 				},
 				{
 					"type": "github",
 					"url": "https://github.com/spondbob/carikos"
+				}
+			]
+		},
+		{
+			"title": "Endeavour in The World",
+			"subTitle": "Online Yearbook",
+			"date": "2009",
+			"descriptions": [
+				"A digital copy of highschool's yearbook with more interaction and flexibility to retrieve information.",
+				"Stack: PHP, Javascript, jQuery, AJAX, CSS, MySQL"
+			],
+			"type": "personal",
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://endeavour.eamca.com/"
+				}
+			]
+		},
+		{
+			"title": "CLICK",
+			"subTitle": "Web Design Competition",
+			"date": "2008",
+			"descriptions": [
+				"A brand new e-learning system to support schools with materials, social networks, and forums.",
+				"Awarded Jury Special Award at e-biko in Turkey.",
+				"Stack: PHP, HTML, CSS, MySQL, Flash"
+			],
+			"type": "competition",
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://click.eamca.com/"
 				}
 			]
 		}
@@ -24533,7 +24779,7 @@
 			],
 			"links": [
 				{
-					"type": "website",
+					"type": "globe",
 					"url": "http://rubyconf.org.au/2015"
 				}
 			]
@@ -24548,7 +24794,7 @@
 			],
 			"links": [
 				{
-					"type": "website",
+					"type": "globe",
 					"url": "http://melbourne.yowconference.com.au/"
 				}
 			]
@@ -24557,66 +24803,6 @@
 
 /***/ },
 /* 215 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Section = __webpack_require__(207);
-
-	var _Section2 = _interopRequireDefault(_Section);
-
-	var _softSkills = __webpack_require__(216);
-
-	var _softSkills2 = _interopRequireDefault(_softSkills);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SoftSkills = function (_Component) {
-	  _inherits(SoftSkills, _Component);
-
-	  function SoftSkills() {
-	    _classCallCheck(this, SoftSkills);
-
-	    return _possibleConstructorReturn(this, (SoftSkills.__proto__ || Object.getPrototypeOf(SoftSkills)).apply(this, arguments));
-	  }
-
-	  _createClass(SoftSkills, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_Section2.default, {
-	          title: 'Soft Skills',
-	          id: 'soft-skills',
-	          data: _softSkills2.default })
-	      );
-	    }
-	  }]);
-
-	  return SoftSkills;
-	}(_react.Component);
-
-	exports.default = SoftSkills;
-
-/***/ },
-/* 216 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -24639,6 +24825,43 @@
 			"descriptions": [
 				"Quickly learn and adopt new technology that adequate for user specifications.",
 				"Keen on to explore new emerging technologies and methodologies to advance with current fast-paced development."
+			]
+		}
+	];
+
+/***/ },
+/* 216 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"title": "PIC for Internet Radio",
+			"subTitle": "Indonesian Students Association in Australia",
+			"date": "2015 - 2016",
+			"descriptions": [
+				"Working internally to setup and maintain the infrastructure for internet Radio PPIA.",
+				"Brainstorming with the announcers to prepare creative programs for each weekly live session."
+			],
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://ppi-australia.org/"
+				}
+			]
+		},
+		{
+			"title": "Head of Internal Affair Department",
+			"subTitle": "Informatics Students Association",
+			"date": "2010 - 2011",
+			"descriptions": [
+				"To and from students, the department was responsible to organize monthly discussion forum to gain students’ aspirations and deliver academic information and upcoming events.",
+				"Being the head of department acknowledged organizational and leadership and responsible for its members’ progression and performance to achieve its main objectives."
+			],
+			"links": [
+				{
+					"type": "globe",
+					"url": "http://hmtc.if.its.ac.id/"
+				}
 			]
 		}
 	];
