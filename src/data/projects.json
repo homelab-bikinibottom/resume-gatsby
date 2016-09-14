@@ -77,6 +77,7 @@
     "descriptions":
     [
       "A simple business intelligence to visualise data into summarised information and graphical trends.",
+      "It was designed as a modular system to easily attach new modules onto it for a new dimension of information.",
       "Stack: PHP, CodeIgniter, Hierarchical MVC, MSSQL, jQuery, Highcharts, Bootstrap, Git"
     ],
     "type": "commercial"
