@@ -24,10 +24,33 @@ class SectionItem extends Component {
     )
   }
 
+  type() {
+    let className = "success"
+    let label = "University"
+    switch(this.props.data.type) {
+      case "personal":
+        className = "info"
+        label = "Personal"
+        break;
+      case "commercial":
+        className = "primary"
+        label = "Commercial"
+        break;
+      case "competition":
+        className = "default"
+        label = "Competition"
+        break;
+    }
+    return(
+        <span className={"tag tag-" + className}>{label}</span>
+    )
+  }
+
   render() {
     return (
       <div className="row">
         <div className="col-lg-2">
+          { this.props.data.type ? this.type() : "" }
           <p>{this.props.data.date}</p>
           {
             this.props.data.hasOwnProperty('links')

@@ -8,6 +8,7 @@
       "Develop isolated front-end and back-end layer with React and Rails using REST API to communicate.",
       "Stack: Rails 5, Node.js, ReactJS, Webpack, Mocha, PostgreSQL, RESTful API, Bootstrap, Docker"
     ],
+    "type": "personal",
     "links":
     [
       { 
@@ -26,6 +27,7 @@
       "The server was also used to transform PDF/CSV documents into a proper data structure and translating addresses to the actual coordinate using Google Maps API.",
       "Stack: Rails 4.2, PostgreSQL, Rake, Google Maps API, RESTful API, Bootstrap, Docker, Azure"
     ],
+    "type": "univerity",
     "links":
     [
       { 
@@ -47,6 +49,7 @@
       "The first hands-on project with friends to learn Rails with its stacks and how to do testings.",
       "Stack: Rails 4.2, PostgreSQL, RSpec, Capybara, CoffeeScript, Elasticsearch, Docker, Git"
     ],
+    "type": "personal",
     "links":
     [
       { 
@@ -63,7 +66,8 @@
     [
       "A simple business intelligence to visualise data into summarised information and graphical trends.",
       "Stack: PHP, CodeIgniter, Hierarchical MVC, MSSQL, jQuery, Highcharts, Bootstrap, Git"
-    ]
+    ],
+    "type": "commercial"
   },
   {
     "title": "RePlace",
@@ -74,6 +78,7 @@
       "Developed a Django-based API service to perform recommender algorithms for the Android app.",
       "Stack: Python, Django, MySQL, Android, RESTful API, Git"
     ],
+    "type": "univerity",
     "links":
     [
       {
@@ -91,6 +96,7 @@
       "A final project assignment to determine traffic density from Twitter crowdsourcing.",
       "Stack: PHP, CodeIgniter, Twitter API, Google Maps API, Google Fusion Table API"
     ],
+    "type": "univerity",
     "links":
     [
       { 
@@ -108,6 +114,7 @@
       "An Airbnb-like website to find nearby accommodations developed for Indonesian market.",
       "Stack: PHP, CodeIgniter, MySQL, jQuery, Google Maps API"
     ],
+    "type": "competition",
     "links":
     [
       { 
