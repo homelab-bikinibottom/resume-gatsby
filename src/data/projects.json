@@ -101,7 +101,7 @@
     ]
   },
   {
-    "title": "Ilaluya",
+    "title": "Traffic Density From Twitter",
     "subTitle": "Multimedia Networks",
     "date": "Aug 2012",
     "descriptions":
@@ -119,12 +119,73 @@
     ]
   },
   {
+    "title": "Class Attendance",
+    "subTitle": "Wireless Networks and Mobile Computing",
+    "date": "Feb 2012",
+    "descriptions":
+    [
+      "It aims to automate class attendance using Bluetooth devices by discovering available students' devices.",
+      "The discovered devices will be recorded to represent students' attendance.",
+      "Stack: Android, PHP, CodeIgniter, MySQL"
+    ],
+    "type": "univerity",
+    "links":
+    [
+      { 
+        "type": "github",
+        "url": "https://github.com/spondbob/bluetooth"
+      },
+      { 
+        "type": "github",
+        "url": "https://github.com/spondbob/bluetoothAttendance"
+      }
+    ]
+  },
+  {
+    "title": "Nusantara Card Battle",
+    "subTitle": ".NET Framework Programming",
+    "date": "Feb 2012",
+    "descriptions":
+    [
+      "It is a turn-base multiplayer card game based on C# .NET framework.",
+      "Responsible to develop a section of the game where players can manage their card collections and deck then integrate it to the main system.",
+      "Stack: C#.NET, FluentNHibernate, Linq, MySQL"
+    ],
+    "type": "univerity",
+    "links":
+    [
+      { 
+        "type": "github",
+        "url": "https://github.com/aldoalase/nusantara-card-battle"
+      }
+    ]
+  },
+  {
+    "title": "Laboratory Website",
+    "subTitle": "Computer Architecture and Networks Laboratory",
+    "date": "2012",
+    "descriptions":
+    [
+      "A web application to manage laboratory's reservation, inventory administration, and maintenance record services",
+      "Stack: PHP, CodeIgniter, Grocery CRUD, MySQL"
+    ],
+    "type": "univerity",
+    "links":
+    [
+      { 
+        "type": "website",
+        "url": "http://riset.ajk.if.its.ac.id/apps/"
+      }
+    ]
+  },
+  {
     "title": "CariKos",
     "subTitle": "Web Design Competition",
     "date": "Oct 2011",
     "descriptions":
     [
       "An Airbnb-like website to find nearby accommodations developed for Indonesian market.",
+      "Awarded Second Runner-up at Gemastik 5 from Ministry of Education Indonesia.",
       "Stack: PHP, CodeIgniter, MySQL, jQuery, Google Maps API"
     ],
     "type": "competition",
@@ -137,6 +198,43 @@
       { 
         "type": "github",
         "url": "https://github.com/spondbob/carikos"
+      }
+    ]
+  },
+  {
+    "title": "Endeavour in The World",
+    "subTitle": "Online Yearbook",
+    "date": "2009",
+    "descriptions":
+    [
+      "A digital copy of highschool's yearbook with more interaction and flexibility to retrieve information.",
+      "Stack: PHP, Javascript, jQuery, AJAX, CSS, MySQL"
+    ],
+    "type": "personal",
+    "links":
+    [
+      { 
+        "type": "website",
+        "url": "http://endeavour.eamca.com/"
+      }
+    ]
+  },
+  {
+    "title": "CLICK",
+    "subTitle": "Web Design Competition",
+    "date": "2008",
+    "descriptions":
+    [
+      "A brand new e-learning system to support schools with materials, social networks, and forums.",
+      "Awarded Jury Special Award at e-biko in Turkey.",
+      "Stack: PHP, HTML, CSS, MySQL, Flash"
+    ],
+    "type": "competition",
+    "links":
+    [
+      { 
+        "type": "website",
+        "url": "http://click.eamca.com/"
       }
     ]
   }
