@@ -40,6 +40,7 @@ class MainComponent extends Component {
             <SectionWrapper title="Projects" id="projects" const="PROJECTS" />
             <SectionWrapper title="Volunteer" id="volunteer" const="VOLUNTEER" />
             <SectionWrapper title="Soft Skills" id="soft-skills" const="SOFT_SKILLS" />
+            <SectionWrapper title="Organisations" id="organisations" const="ORGANISATIONS" />
           </div>
           <div className="col-lg-4">
             <Sidebar />

@@ -51,6 +51,11 @@ class Sidebar extends Component {
                 Soft Skills
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#organisations">
+                Organisations
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
