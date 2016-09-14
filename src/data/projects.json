@@ -139,12 +139,12 @@
     "links":
     [
       { 
-        "type": "android",
-        "url": "https://github.com/spondbob/bluetooth"
-      },
-      { 
         "type": "github",
         "url": "https://github.com/spondbob/bluetoothAttendance"
+      },
+      {
+        "type": "android",
+        "url": "https://github.com/spondbob/bluetooth"
       }
     ]
   },
