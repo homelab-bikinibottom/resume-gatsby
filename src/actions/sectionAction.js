@@ -6,11 +6,11 @@ import volunteerData from '../data/volunteer';
 import softSkillsData from '../data/soft-skills';
 import organisationsData from '../data/organisations';
 
-export const importSectionData = (section, data) => {
+export const importSectionData = (section, all_data) => {
   return {
     type: types.IMPORT_SECTION_DATA,
     section,
-    data
+    all_data
   }
 }
 

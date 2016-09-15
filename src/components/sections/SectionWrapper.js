@@ -14,7 +14,7 @@ class SectionWrapper extends Component {
         <Section
           title={this.props.title}
           id={this.props.id}
-          data={this.props.data} />
+          data={this.props.all_data} />
       </div>
     )
   }
@@ -22,8 +22,8 @@ class SectionWrapper extends Component {
 
 const mapStateToProps = function(store, ownProps) { 
   return { 
-    data: store.sections.data.length
-          ? store.sections.data.find( (item) => { return item.section === ownProps.id }).data
+    all_data: store.sections.all_data.length
+          ? store.sections.all_data.find( (item) => { return item.section === ownProps.id }).data
           : []
   }; 
 
