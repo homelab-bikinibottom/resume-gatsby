@@ -14,6 +14,15 @@ export const importData = (section, data) => {
   }
 }
 
+export const setFilter = (section, data, filter) => {
+  return {
+    type: types.SET_FILTER,
+    section,
+    data,
+    filter
+  }
+}
+
 export const loadData = (section) => {
   const dataSet = (() => {
     switch(section) {

@@ -1,7 +1,8 @@
 import * as types from '../constants/sectionConst';
 
 const initialState = {
-  data: []
+  data: [],
+  filter: []
 };
 
 const sectionReducer = function(state = initialState, action) {
@@ -13,6 +14,9 @@ const sectionReducer = function(state = initialState, action) {
       } else {
         return state
       }
+      break;
+    case types.SET_FILTER:
+      return Object.assign( {}, state, { filter } );
       break;
   }
   return state;
