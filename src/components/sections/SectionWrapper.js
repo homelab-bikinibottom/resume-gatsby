@@ -21,16 +21,10 @@ class SectionWrapper extends Component {
 }
 
 const mapStateToProps = function(store, ownProps) { 
-  const data = (() => {
-    if (store.sections.data.length > 0) {
-      const temp = store.sections.data.find( (item) => { return item.section === ownProps.const })
-      return temp.data
-    } else {
-      return []
-    }
-  })()
   return { 
-    data
+    data: store.sections.data.length
+          ? store.sections.data.find( (item) => { return item.section === ownProps.const }).data
+          : []
   }; 
 
 }
