@@ -17,22 +17,22 @@ export const importSectionData = (section, data) => {
 export const loadSectionData = (section) => {
   const dataSet = (() => {
     switch(section) {
-      case "EXPERIENCE":
+      case "experience":
         return experienceData
         break;
-      case "EDUCATION":
+      case "education":
         return educationData
         break;
-      case "PROJECTS":
+      case "projects":
         return projectsData
         break;
-      case "VOLUNTEER":
+      case "volunteer":
         return volunteerData
         break;
-      case "SOFT_SKILLS":
+      case "soft-skills":
         return softSkillsData
         break;
-      case "ORGANISATIONS":
+      case "organisations":
         return organisationsData
         break;
     }

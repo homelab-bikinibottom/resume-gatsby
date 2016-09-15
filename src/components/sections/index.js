@@ -7,12 +7,12 @@ class Sections extends Component {
     return (
       <div>
         <DevelopmentStacks />
-        <SectionWrapper title="Experience" id="experience" const="EXPERIENCE" />
-        <SectionWrapper title="Education" id="education" const="EDUCATION" />
-        <SectionWrapper title="Projects" id="projects" const="PROJECTS" />
-        <SectionWrapper title="Volunteer" id="volunteer" const="VOLUNTEER" />
-        <SectionWrapper title="Soft Skills" id="soft-skills" const="SOFT_SKILLS" />
-        <SectionWrapper title="Organisations" id="organisations" const="ORGANISATIONS" />
+        <SectionWrapper title="Experience" id="experience" />
+        <SectionWrapper title="Education" id="education" />
+        <SectionWrapper title="Projects" id="projects" />
+        <SectionWrapper title="Volunteer" id="volunteer" />
+        <SectionWrapper title="Soft Skills" id="soft-skills" />
+        <SectionWrapper title="Organisations" id="organisations" />
       </div>
     )
   }
