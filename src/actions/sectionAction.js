@@ -6,24 +6,15 @@ import volunteerData from '../data/volunteer';
 import softSkillsData from '../data/soft-skills';
 import organisationsData from '../data/organisations';
 
-export const importData = (section, data) => {
+export const importSectionData = (section, data) => {
   return {
-    type: types.IMPORT_DATA,
+    type: types.IMPORT_SECTION_DATA,
     section,
     data
   }
 }
 
-export const setFilter = (section, data, filter) => {
-  return {
-    type: types.SET_FILTER,
-    section,
-    data,
-    filter
-  }
-}
-
-export const loadData = (section) => {
+export const loadSectionData = (section) => {
   const dataSet = (() => {
     switch(section) {
       case "EXPERIENCE":
@@ -47,6 +38,6 @@ export const loadData = (section) => {
     }
   })()
   return (dispatch) => {
-    dispatch(importData(section, dataSet))
+    dispatch(importSectionData(section, dataSet))
   }
 }
