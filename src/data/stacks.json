@@ -1,0 +1,74 @@
+{
+  "backend":
+  {
+    "title": "Back-end",
+    "description": "Languages and frameworks",
+    "items":
+    [
+      {
+        "keys": ["ruby", "ror", "rspec"],
+        "names": ["Ruby", "Ruby on Rails", "RSpec"]
+      },
+      {
+        "keys": ["php", "ci", "yii"],
+        "names": ["PHP", "CodeIgniter", "Yii"]
+      },
+      {
+        "keys": ["python", "django"],
+        "names": ["Python", "Django"]
+      },
+      {
+        "keys": ["csharp", "dotnet"],
+        "names": ["C#", ".NET"]
+      },
+      {
+        "keys": ["java"],
+        "names": ["Java"]
+      }
+    ]
+  },
+  "frontend":
+  {
+    "title": "Front-end",
+    "description": "Scripting and styling.",
+    "items":
+    [
+      {
+        "keys": ["html5", "css", "bootstrap"],
+        "names": ["HTML5", "CSS", "Bootstrap"]
+      },
+      {
+        "keys": ["js", "cf", "jquery"],
+        "names": ["Javascript", "CoffeeScript", "jQuery"]
+      },
+      {
+        "keys": ["es6", "react", "redux", "node", "mocha", "chai"],
+        "names": ["ES2015", "ReactJS", "Redux", "Node.js", "Mocha", "Chai"]
+      }
+    ]
+  },
+  "supports":
+  {
+    "title": "Supports",
+    "description": "Databases, operating systems, and tools.",
+    "items":
+    [
+      {
+        "keys": ["mysql", "pg", "mongo"],
+        "names": ["MySQL", "PostgreSQL", "MongoDB"]
+      },
+      {
+        "keys": ["windows", "osx", "linux"],
+        "names": ["Windows", "OS X", "Linux (Debian, Ubuntu, ArchLinux and openSUSE)"]
+      },
+      {
+        "keys": ["docker", "slack", "trello", "webpack", "travis"],
+        "names": ["Docker", "Slack", "Trello", "Webpack", "Travis CI"]
+      },
+      {
+        "keys": ["android", "rest"],
+        "names": ["Android Development", "RESTful API"]
+      }
+    ]
+  }
+}
