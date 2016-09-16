@@ -2,21 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import SectionItem from './SectionItem';
 
 class Section extends Component {
-  // filtering_data() {
-  //   if(this.props.hasOwnProperty('filter')) {
-  //     const filtered_data = [];
-  //     this.props.data.map(function(data, key) {
-  //       data.keywords.map(function(keyword){
-  //         if(this.props.filter.some(elem => elem === keyword)){
-  //           filtered_data.push(data);
-  //         }
-  //       })
-  //     })
-  //   } else {
-  //     this.props.data      
-  //   }
-  // }
-
   render() {
     return (
       <div>

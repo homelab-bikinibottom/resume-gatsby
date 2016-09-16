@@ -1,3 +1,5 @@
 // Section
 export const IMPORT_SECTION_DATA = 'IMPORT_SECTION_DATA';
-export const SET_FILTER = 'SET_FILTER';
+export const SET_FILTERS = 'SET_FILTERS';
+export const CLEAR_FILTERS = 'CLEAR_FILTERS';
+export const LOAD_FILTERED_DATA = 'LOAD_FILTERED_DATA';
