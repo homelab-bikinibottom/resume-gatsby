@@ -23397,7 +23397,9 @@
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	var initialState = {
-	  data: []
+	  all_data: [],
+	  filtered_data: [],
+	  filters: []
 	};
 
 	var sectionReducer = function sectionReducer() {
@@ -23405,9 +23407,29 @@
 	  var action = arguments[1];
 
 	  switch (action.type) {
-	    case types.IMPORT_DATA:
-	      if (action.section && action.data) {
-	        state.data.push({ section: action.section, data: action.data });
+	    case types.IMPORT_SECTION_DATA:
+	      if (action.section && action.all_data) {
+	        state.all_data.push({ section: action.section, data: action.all_data });
+	        return Object.assign({}, state);
+	      } else {
+	        return state;
+	      }
+	      break;
+	    case types.SET_FILTERS:
+	      return Object.assign({}, state, {
+	        filters: action.filters
+	      });
+	      break;
+	    case types.CLEAR_FILTERS:
+	      return Object.assign({}, state, {
+	        filters: [],
+	        filtered_data: []
+	      });
+	      break;
+	    case types.LOAD_FILTERED_DATA:
+	      if (action.section && action.filtered_data) {
+	        state.filtered_data[action.section] = { data: action.filtered_data };
+	        // state.filtered_data.push({ section: action.section, data: action.filtered_data });
 	        return Object.assign({}, state);
 	      } else {
 	        return state;
@@ -23429,7 +23451,10 @@
 	  value: true
 	});
 	// Section
-	var IMPORT_DATA = exports.IMPORT_DATA = 'IMPORT_DATA';
+	var IMPORT_SECTION_DATA = exports.IMPORT_SECTION_DATA = 'IMPORT_SECTION_DATA';
+	var SET_FILTERS = exports.SET_FILTERS = 'SET_FILTERS';
+	var CLEAR_FILTERS = exports.CLEAR_FILTERS = 'CLEAR_FILTERS';
+	var LOAD_FILTERED_DATA = exports.LOAD_FILTERED_DATA = 'LOAD_FILTERED_DATA';
 
 /***/ },
 /* 203 */
@@ -23447,17 +23472,25 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Sidebar = __webpack_require__(204);
+	var _Header = __webpack_require__(204);
+
+	var _Header2 = _interopRequireDefault(_Header);
+
+	var _Jumbotron = __webpack_require__(205);
+
+	var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
+
+	var _Footer = __webpack_require__(206);
+
+	var _Footer2 = _interopRequireDefault(_Footer);
+
+	var _Sidebar = __webpack_require__(207);
 
 	var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
-	var _DevelopmentStacks = __webpack_require__(205);
+	var _Sections = __webpack_require__(208);
 
-	var _DevelopmentStacks2 = _interopRequireDefault(_DevelopmentStacks);
-
-	var _SectionWrapper = __webpack_require__(206);
-
-	var _SectionWrapper2 = _interopRequireDefault(_SectionWrapper);
+	var _Sections2 = _interopRequireDefault(_Sections);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23482,85 +23515,15 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'header clearfix' },
-	          _react2.default.createElement(
-	            'nav',
-	            null,
-	            _react2.default.createElement(
-	              'ul',
-	              { className: 'nav nav-pills pull-xs-right' },
-	              _react2.default.createElement(
-	                'li',
-	                { className: 'nav-item' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'nav-link active', href: '#' },
-	                  'Resume ',
-	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'sr-only' },
-	                    '(current)'
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                { className: 'nav-item' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'nav-link', href: 'http://eamca.com', target: '_blank' },
-	                  'About'
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                { className: 'nav-item' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'nav-link', href: 'http://blog.eamca.com', target: '_blank' },
-	                  'Blog'
-	                )
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'h3',
-	            { className: 'text-muted' },
-	            'Resume'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-lg-12' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'jumbotron' },
-	              _react2.default.createElement(
-	                'h1',
-	                { className: 'display-3', id: 'greeting-message', style: { color: '#eceeef' } },
-	                'Hello,'
-	              )
-	            )
-	          )
-	        ),
+	        _react2.default.createElement(_Header2.default, null),
+	        _react2.default.createElement(_Jumbotron2.default, null),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'row' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'col-lg-8' },
-	            _react2.default.createElement(_DevelopmentStacks2.default, null),
-	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Experience', id: 'experience', 'const': 'EXPERIENCE' }),
-	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Education', id: 'education', 'const': 'EDUCATION' }),
-	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Projects', id: 'projects', 'const': 'PROJECTS' }),
-	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Volunteer', id: 'volunteer', 'const': 'VOLUNTEER' }),
-	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Soft Skills', id: 'soft-skills', 'const': 'SOFT_SKILLS' }),
-	            _react2.default.createElement(_SectionWrapper2.default, { title: 'Organisations', id: 'organisations', 'const': 'ORGANISATIONS' })
+	            _react2.default.createElement(_Sections2.default, null)
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -23568,23 +23531,7 @@
 	            _react2.default.createElement(_Sidebar2.default, null)
 	          )
 	        ),
-	        _react2.default.createElement(
-	          'footer',
-	          { className: 'footer' },
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '© Rizky Noor Ichwan 2016.',
-	            _react2.default.createElement('br', null),
-	            'Layout taken and modified from ',
-	            _react2.default.createElement(
-	              'a',
-	              { href: 'http://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/', target: '_blank' },
-	              'Bootstrap Examples'
-	            ),
-	            '.'
-	          )
-	        )
+	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
 	  }]);
@@ -23596,6 +23543,221 @@
 
 /***/ },
 /* 204 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Header = function (_Component) {
+	  _inherits(Header, _Component);
+
+	  function Header() {
+	    _classCallCheck(this, Header);
+
+	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+	  }
+
+	  _createClass(Header, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "header clearfix" },
+	        _react2.default.createElement(
+	          "nav",
+	          null,
+	          _react2.default.createElement(
+	            "ul",
+	            { className: "nav nav-pills pull-xs-right" },
+	            _react2.default.createElement(
+	              "li",
+	              { className: "nav-item" },
+	              _react2.default.createElement(
+	                "a",
+	                { className: "nav-link active", href: "#" },
+	                "Resume ",
+	                _react2.default.createElement(
+	                  "span",
+	                  { className: "sr-only" },
+	                  "(current)"
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "li",
+	              { className: "nav-item" },
+	              _react2.default.createElement(
+	                "a",
+	                { className: "nav-link", href: "http://eamca.com", target: "_blank" },
+	                "About"
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "li",
+	              { className: "nav-item" },
+	              _react2.default.createElement(
+	                "a",
+	                { className: "nav-link", href: "http://blog.eamca.com", target: "_blank" },
+	                "Blog"
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "h3",
+	          { className: "text-muted" },
+	          "Resume"
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Header;
+	}(_react.Component);
+
+	exports.default = Header;
+
+/***/ },
+/* 205 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Jumbotron = function (_Component) {
+	  _inherits(Jumbotron, _Component);
+
+	  function Jumbotron() {
+	    _classCallCheck(this, Jumbotron);
+
+	    return _possibleConstructorReturn(this, (Jumbotron.__proto__ || Object.getPrototypeOf(Jumbotron)).apply(this, arguments));
+	  }
+
+	  _createClass(Jumbotron, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "row" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "col-lg-12" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "jumbotron" },
+	            _react2.default.createElement(
+	              "h1",
+	              { className: "display-3", id: "greeting-message", style: { color: '#eceeef' } },
+	              "Hello,"
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Jumbotron;
+	}(_react.Component);
+
+	exports.default = Jumbotron;
+
+/***/ },
+/* 206 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Footer = function (_Component) {
+	  _inherits(Footer, _Component);
+
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	  }
+
+	  _createClass(Footer, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "footer",
+	        { className: "footer" },
+	        _react2.default.createElement(
+	          "p",
+	          null,
+	          "© Rizky Noor Ichwan 2016.",
+	          _react2.default.createElement("br", null),
+	          "Layout taken and modified from ",
+	          _react2.default.createElement(
+	            "a",
+	            { href: "http://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/", target: "_blank" },
+	            "Bootstrap Examples"
+	          ),
+	          "."
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Footer;
+	}(_react.Component);
+
+	exports.default = Footer;
+
+/***/ },
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23748,7 +23910,372 @@
 	exports.default = Sidebar;
 
 /***/ },
-/* 205 */
+/* 208 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRedux = __webpack_require__(173);
+
+	var _DevelopmentStacks = __webpack_require__(209);
+
+	var _DevelopmentStacks2 = _interopRequireDefault(_DevelopmentStacks);
+
+	var _SectionWrapper = __webpack_require__(212);
+
+	var _SectionWrapper2 = _interopRequireDefault(_SectionWrapper);
+
+	var _sectionAction = __webpack_require__(216);
+
+	var actions = _interopRequireWildcard(_sectionAction);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Sections = function (_Component) {
+	  _inherits(Sections, _Component);
+
+	  function Sections() {
+	    _classCallCheck(this, Sections);
+
+	    return _possibleConstructorReturn(this, (Sections.__proto__ || Object.getPrototypeOf(Sections)).apply(this, arguments));
+	  }
+
+	  _createClass(Sections, [{
+	    key: 'handleSetFilters',
+	    value: function handleSetFilters(filters) {
+	      var _this2 = this;
+
+	      filters.every(function (e, i) {
+	        return e === _this2.props.filters[i];
+	      }) ? this.props.dispatch(actions.clearFilters()) : this.props.dispatch(actions.setFilters(filters));
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_DevelopmentStacks2.default, { handleSetFilters: this.handleSetFilters.bind(this) }),
+	        _react2.default.createElement(_SectionWrapper2.default, { title: 'Experience', id: 'experience' }),
+	        _react2.default.createElement(_SectionWrapper2.default, { title: 'Education', id: 'education' }),
+	        _react2.default.createElement(_SectionWrapper2.default, { title: 'Projects', id: 'projects' }),
+	        _react2.default.createElement(_SectionWrapper2.default, { title: 'Volunteer', id: 'volunteer' }),
+	        _react2.default.createElement(_SectionWrapper2.default, { title: 'Soft Skills', id: 'soft-skills' }),
+	        _react2.default.createElement(_SectionWrapper2.default, { title: 'Organisations', id: 'organisations' })
+	      );
+	    }
+	  }]);
+
+	  return Sections;
+	}(_react.Component);
+
+	var mapStateToProps = function mapStateToProps(state, ownProps) {
+	  var filters = state.sections.filters;
+
+	  return {
+	    filters: filters
+	  };
+	};
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Sections);
+
+/***/ },
+/* 209 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRedux = __webpack_require__(173);
+
+	var _stacks = __webpack_require__(210);
+
+	var _stacks2 = _interopRequireDefault(_stacks);
+
+	var _ListItem = __webpack_require__(211);
+
+	var _ListItem2 = _interopRequireDefault(_ListItem);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var DevelopmentStacks = function (_Component) {
+	  _inherits(DevelopmentStacks, _Component);
+
+	  function DevelopmentStacks() {
+	    _classCallCheck(this, DevelopmentStacks);
+
+	    return _possibleConstructorReturn(this, (DevelopmentStacks.__proto__ || Object.getPrototypeOf(DevelopmentStacks)).apply(this, arguments));
+	  }
+
+	  _createClass(DevelopmentStacks, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-lg-12' },
+	            _react2.default.createElement(
+	              'h2',
+	              { id: 'development-stacks' },
+	              'Development Stacks'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-lg-4' },
+	            _react2.default.createElement(_ListItem2.default, {
+	              data: _stacks2.default.backend,
+	              handleSetFilters: this.props.handleSetFilters })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-lg-4' },
+	            _react2.default.createElement(_ListItem2.default, {
+	              data: _stacks2.default.frontend,
+	              handleSetFilters: this.props.handleSetFilters })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-lg-4' },
+	            _react2.default.createElement(_ListItem2.default, {
+	              data: _stacks2.default.supports,
+	              handleSetFilters: this.props.handleSetFilters })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return DevelopmentStacks;
+	}(_react.Component);
+
+	var mapStateToProps = function mapStateToProps(state, ownProps) {
+	  var filters = state.sections.filters;
+
+	  return {
+	    filters: filters
+	  };
+	};
+
+	DevelopmentStacks.propTypes = {
+	  handleSetFilters: _react.PropTypes.func.isRequired
+	};
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(DevelopmentStacks);
+
+/***/ },
+/* 210 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"backend": {
+			"title": "Back-end",
+			"description": "Languages and frameworks",
+			"items": [
+				{
+					"keys": [
+						"ruby",
+						"ror",
+						"rspec"
+					],
+					"names": [
+						"Ruby",
+						"Ruby on Rails",
+						"RSpec"
+					]
+				},
+				{
+					"keys": [
+						"php",
+						"ci",
+						"yii"
+					],
+					"names": [
+						"PHP",
+						"CodeIgniter",
+						"Yii"
+					]
+				},
+				{
+					"keys": [
+						"python",
+						"django"
+					],
+					"names": [
+						"Python",
+						"Django"
+					]
+				},
+				{
+					"keys": [
+						"csharp",
+						"dotnet"
+					],
+					"names": [
+						"C#",
+						".NET"
+					]
+				},
+				{
+					"keys": [
+						"java"
+					],
+					"names": [
+						"Java"
+					]
+				}
+			]
+		},
+		"frontend": {
+			"title": "Front-end",
+			"description": "Scripting and styling.",
+			"items": [
+				{
+					"keys": [
+						"html5",
+						"css",
+						"bootstrap"
+					],
+					"names": [
+						"HTML5",
+						"CSS",
+						"Bootstrap"
+					]
+				},
+				{
+					"keys": [
+						"js",
+						"cf",
+						"jquery"
+					],
+					"names": [
+						"Javascript",
+						"CoffeeScript",
+						"jQuery"
+					]
+				},
+				{
+					"keys": [
+						"es6",
+						"react",
+						"redux",
+						"node",
+						"mocha",
+						"chai"
+					],
+					"names": [
+						"ES2015",
+						"ReactJS",
+						"Redux",
+						"Node.js",
+						"Mocha",
+						"Chai"
+					]
+				}
+			]
+		},
+		"supports": {
+			"title": "Supports",
+			"description": "Databases, operating systems, and tools.",
+			"items": [
+				{
+					"keys": [
+						"mysql",
+						"pg",
+						"mongo"
+					],
+					"names": [
+						"MySQL",
+						"PostgreSQL",
+						"MongoDB"
+					]
+				},
+				{
+					"keys": [
+						"windows",
+						"osx",
+						"linux"
+					],
+					"names": [
+						"Windows",
+						"OS X",
+						"Linux (Debian, Ubuntu, ArchLinux and openSUSE)"
+					]
+				},
+				{
+					"keys": [
+						"docker",
+						"slack",
+						"trello",
+						"webpack",
+						"travis"
+					],
+					"names": [
+						"Docker",
+						"Slack",
+						"Trello",
+						"Webpack",
+						"Travis CI"
+					]
+				},
+				{
+					"keys": [
+						"android",
+						"rest"
+					],
+					"names": [
+						"Android Development",
+						"RESTful API"
+					]
+				}
+			]
+		}
+	};
+
+/***/ },
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23771,175 +24298,71 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var DevelopmentStacks = function (_Component) {
-	  _inherits(DevelopmentStacks, _Component);
+	var ListItem = function (_Component) {
+	  _inherits(ListItem, _Component);
 
-	  function DevelopmentStacks() {
-	    _classCallCheck(this, DevelopmentStacks);
+	  function ListItem() {
+	    _classCallCheck(this, ListItem);
 
-	    return _possibleConstructorReturn(this, (DevelopmentStacks.__proto__ || Object.getPrototypeOf(DevelopmentStacks)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (ListItem.__proto__ || Object.getPrototypeOf(ListItem)).apply(this, arguments));
 	  }
 
-	  _createClass(DevelopmentStacks, [{
+	  _createClass(ListItem, [{
+	    key: "handleOnClick",
+	    value: function handleOnClick(e, keys) {
+	      e.preventDefault();
+	      this.props.handleSetFilters(keys);
+	    }
+	  }, {
 	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        null,
+	        { className: "list-group" },
 	        _react2.default.createElement(
 	          "div",
-	          { className: "row" },
+	          { className: "list-group-item list-group-item-action active" },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "col-lg-12" },
-	            _react2.default.createElement(
-	              "h2",
-	              { id: "development-stacks" },
-	              "Development Stacks"
-	            )
+	            "h5",
+	            { className: "list-group-item-heading" },
+	            this.props.data.title
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            { className: "list-group-item-text" },
+	            this.props.data.description
 	          )
 	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "row" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "col-lg-4" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "list-group" },
-	              _react2.default.createElement(
-	                "div",
-	                { className: "list-group-item list-group-item-action active" },
-	                _react2.default.createElement(
-	                  "h5",
-	                  { className: "list-group-item-heading" },
-	                  "Back-end"
-	                ),
-	                _react2.default.createElement(
-	                  "p",
-	                  { className: "list-group-item-text" },
-	                  "Languages and frameworks."
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "Ruby, Ruby on Rails, Rspec"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "PHP, CodeIgniter, Yii"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "Python, Django"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "C#, .NET"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "Java"
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "col-lg-4" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "list-group" },
-	              _react2.default.createElement(
-	                "div",
-	                { className: "list-group-item list-group-item-action active" },
-	                _react2.default.createElement(
-	                  "h5",
-	                  { className: "list-group-item-heading" },
-	                  "Front-end"
-	                ),
-	                _react2.default.createElement(
-	                  "p",
-	                  { className: "list-group-item-text" },
-	                  "Scripting and styling."
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "HTML5, CSS, Bootstrap"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "Javascript, jQuery"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "ES2015, CoffeeScript, ReactJS, Redux, Node.js, Mocha, Chai"
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "col-lg-4" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "list-group" },
-	              _react2.default.createElement(
-	                "div",
-	                { className: "list-group-item list-group-item-action active" },
-	                _react2.default.createElement(
-	                  "h5",
-	                  { className: "list-group-item-heading" },
-	                  "Supports"
-	                ),
-	                _react2.default.createElement(
-	                  "p",
-	                  { className: "list-group-item-text" },
-	                  "Databases, operating systems, and tools."
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "MySQL, MSSQL, PostgreSQL, MongoDB"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "Windows, OS X, Linux (Debian, Ubuntu, ArchLinux, and openSUSE)"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "Docker, Slack, Trello, Webpack, Travis CI"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "list-group-item list-group-item-action" },
-	                "Android Development and RESTful API"
-	              )
-	            )
-	          )
-	        )
+	        this.props.data.items.map(function (item, key) {
+	          var _this2 = this;
+
+	          return _react2.default.createElement(
+	            "a",
+	            { href: "#",
+	              key: key,
+	              className: "list-group-item list-group-item-action",
+	              onClick: function onClick(event) {
+	                return _this2.handleOnClick(event, item.keys);
+	              } },
+	            item.names.join(", ")
+	          );
+	        }.bind(this))
 	      );
 	    }
 	  }]);
 
-	  return DevelopmentStacks;
+	  return ListItem;
 	}(_react.Component);
 
-	exports.default = DevelopmentStacks;
+	ListItem.propTypes = {
+	  data: _react.PropTypes.object.isRequired,
+	  handleSetFilters: _react.PropTypes.func.isRequired
+	};
+
+	exports.default = ListItem;
 
 /***/ },
-/* 206 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23956,11 +24379,15 @@
 
 	var _reactRedux = __webpack_require__(173);
 
-	var _Section = __webpack_require__(207);
+	var _Section = __webpack_require__(213);
 
 	var _Section2 = _interopRequireDefault(_Section);
 
-	var _sectionAction = __webpack_require__(210);
+	var _sectionAction = __webpack_require__(216);
+
+	var action = _interopRequireWildcard(_sectionAction);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23982,7 +24409,21 @@
 	  _createClass(SectionWrapper, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      this.props.dispatch((0, _sectionAction.loadData)(this.props.const));
+	      this.props.dispatch(action.loadSectionData(this.props.id));
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      if (this.props.filters.every(function (e, i) {
+	        return e != nextProps.filters[i];
+	      }) && nextProps.filters.length > 0) {
+	        this.props.dispatch(action.loadFilteredData(this.props.id, nextProps.filters, this.props.all_data));
+	      }
+	    }
+	  }, {
+	    key: 'dataSource',
+	    value: function dataSource() {
+	      return this.props.filters.length ? this.props.filtered_data : this.props.all_data;
 	    }
 	  }, {
 	    key: 'render',
@@ -23993,7 +24434,7 @@
 	        _react2.default.createElement(_Section2.default, {
 	          title: this.props.title,
 	          id: this.props.id,
-	          data: this.props.data })
+	          data: this.dataSource() })
 	      );
 	    }
 	  }]);
@@ -24001,32 +24442,31 @@
 	  return SectionWrapper;
 	}(_react.Component);
 
-	var mapStateToProps = function mapStateToProps(store, ownProps) {
-	  var data = function () {
-	    if (store.sections.data.length > 0) {
-	      var temp = store.sections.data.find(function (item) {
-	        return item.section === ownProps.const;
-	      });
-	      return temp.data;
-	    } else {
-	      return [];
-	    }
-	  }();
+	var mapStateToProps = function mapStateToProps(state, ownProps) {
+	  var _state$sections = state.sections;
+	  var all_data = _state$sections.all_data;
+	  var filters = _state$sections.filters;
+	  var filtered_data = _state$sections.filtered_data;
+
+	  var check_filtered_data = ownProps.id in filtered_data ? filtered_data[ownProps.id].data : [];
 	  return {
-	    data: data
+	    filters: filters,
+	    filtered_data: check_filtered_data,
+	    all_data: all_data.length ? all_data.find(function (item) {
+	      return item.section === ownProps.id;
+	    }).data : []
 	  };
 	};
 
 	SectionWrapper.propTypes = {
 	  title: _react.PropTypes.string.isRequired,
-	  id: _react.PropTypes.string.isRequired,
-	  const: _react.PropTypes.string.isRequired
+	  id: _react.PropTypes.string.isRequired
 	};
 
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(SectionWrapper);
 
 /***/ },
-/* 207 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24041,7 +24481,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _SectionItem = __webpack_require__(208);
+	var _SectionItem = __webpack_require__(214);
 
 	var _SectionItem2 = _interopRequireDefault(_SectionItem);
 
@@ -24064,22 +24504,6 @@
 
 	  _createClass(Section, [{
 	    key: 'render',
-
-	    // filtering_data() {
-	    //   if(this.props.hasOwnProperty('filter')) {
-	    //     const filtered_data = [];
-	    //     this.props.data.map(function(data, key) {
-	    //       data.keywords.map(function(keyword){
-	    //         if(this.props.filter.some(elem => elem === keyword)){
-	    //           filtered_data.push(data);
-	    //         }
-	    //       })
-	    //     })
-	    //   } else {
-	    //     this.props.data      
-	    //   }
-	    // }
-
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
@@ -24116,7 +24540,7 @@
 	exports.default = Section;
 
 /***/ },
-/* 208 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24131,7 +24555,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FaIcon = __webpack_require__(209);
+	var _FaIcon = __webpack_require__(215);
 
 	var _FaIcon2 = _interopRequireDefault(_FaIcon);
 
@@ -24246,7 +24670,7 @@
 	exports.default = SectionItem;
 
 /***/ },
-/* 209 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24295,7 +24719,7 @@
 	exports.default = FaIcon;
 
 /***/ },
-/* 210 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24303,33 +24727,33 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.loadData = exports.importData = undefined;
+	exports.loadFilteredData = exports.loadSectionData = exports.filteredData = exports.clearFilters = exports.setFilters = exports.importSectionData = undefined;
 
 	var _sectionConst = __webpack_require__(202);
 
 	var types = _interopRequireWildcard(_sectionConst);
 
-	var _experience = __webpack_require__(211);
+	var _experience = __webpack_require__(217);
 
 	var _experience2 = _interopRequireDefault(_experience);
 
-	var _education = __webpack_require__(212);
+	var _education = __webpack_require__(218);
 
 	var _education2 = _interopRequireDefault(_education);
 
-	var _projects = __webpack_require__(213);
+	var _projects = __webpack_require__(219);
 
 	var _projects2 = _interopRequireDefault(_projects);
 
-	var _volunteer = __webpack_require__(214);
+	var _volunteer = __webpack_require__(220);
 
 	var _volunteer2 = _interopRequireDefault(_volunteer);
 
-	var _softSkills = __webpack_require__(215);
+	var _softSkills = __webpack_require__(221);
 
 	var _softSkills2 = _interopRequireDefault(_softSkills);
 
-	var _organisations = __webpack_require__(216);
+	var _organisations = __webpack_require__(222);
 
 	var _organisations2 = _interopRequireDefault(_organisations);
 
@@ -24337,44 +24761,90 @@
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-	var importData = exports.importData = function importData(section, data) {
+	var importSectionData = exports.importSectionData = function importSectionData(section, all_data) {
 	  return {
-	    type: types.IMPORT_DATA,
+	    type: types.IMPORT_SECTION_DATA,
 	    section: section,
-	    data: data
+	    all_data: all_data
 	  };
 	};
 
-	var loadData = exports.loadData = function loadData(section) {
+	var setFilters = exports.setFilters = function setFilters(filters) {
+	  return {
+	    type: types.SET_FILTERS,
+	    filters: filters
+	  };
+	};
+
+	var clearFilters = exports.clearFilters = function clearFilters() {
+	  return {
+	    type: types.CLEAR_FILTERS
+	  };
+	};
+
+	var filteredData = exports.filteredData = function filteredData(section, filtered_data) {
+	  return {
+	    type: types.LOAD_FILTERED_DATA,
+	    section: section,
+	    filtered_data: filtered_data
+	  };
+	};
+
+	var loadSectionData = exports.loadSectionData = function loadSectionData(section) {
 	  var dataSet = function () {
 	    switch (section) {
-	      case "EXPERIENCE":
+	      case "experience":
 	        return _experience2.default;
 	        break;
-	      case "EDUCATION":
+	      case "education":
 	        return _education2.default;
 	        break;
-	      case "PROJECTS":
+	      case "projects":
 	        return _projects2.default;
 	        break;
-	      case "VOLUNTEER":
+	      case "volunteer":
 	        return _volunteer2.default;
 	        break;
-	      case "SOFT_SKILLS":
+	      case "soft-skills":
 	        return _softSkills2.default;
 	        break;
-	      case "ORGANISATIONS":
+	      case "organisations":
 	        return _organisations2.default;
 	        break;
 	    }
 	  }();
 	  return function (dispatch) {
-	    dispatch(importData(section, dataSet));
+	    dispatch(importSectionData(section, dataSet));
+	  };
+	};
+
+	var loadFilteredData = exports.loadFilteredData = function loadFilteredData(section, filters, all_data) {
+	  var filtered_data = [];
+	  all_data.map(function (data) {
+	    if (data.hasOwnProperty('keywords')) {
+	      var _loop = function _loop(i) {
+	        if (data.keywords.some(function (elem) {
+	          return elem === filters[i];
+	        })) {
+	          filtered_data.push(data);
+	          return 'break';
+	        }
+	      };
+
+	      for (var i = 0; i < filters.length; i++) {
+	        var _ret = _loop(i);
+
+	        if (_ret === 'break') break;
+	      }
+	    }
+	  });
+	  return function (dispatch) {
+	    dispatch(filteredData(section, filtered_data));
 	  };
 	};
 
 /***/ },
-/* 211 */
+/* 217 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -24398,6 +24868,17 @@
 					"type": "apple",
 					"url": "https://appsto.re/au/Fna4bb.i"
 				}
+			],
+			"keywords": [
+				"ruby",
+				"ror",
+				"bs",
+				"jquery",
+				"pg",
+				"linux",
+				"docker",
+				"slack",
+				"rest"
 			]
 		},
 		{
@@ -24420,6 +24901,13 @@
 					"type": "github",
 					"url": "https://github.com/plummy"
 				}
+			],
+			"keywords": [
+				"ruby",
+				"ror",
+				"docker",
+				"slack",
+				"trello"
 			]
 		},
 		{
@@ -24437,6 +24925,12 @@
 					"type": "globe",
 					"url": "http://ajk.if.its.ac.id/"
 				}
+			],
+			"keywords": [
+				"php",
+				"ci",
+				"mysql",
+				"linux"
 			]
 		},
 		{
@@ -24455,6 +24949,9 @@
 					"type": "globe",
 					"url": "http://if.its.ac.id/en/"
 				}
+			],
+			"keywords": [
+				"python"
 			]
 		},
 		{
@@ -24472,6 +24969,14 @@
 					"type": "globe",
 					"url": "http://www.pln.co.id/"
 				}
+			],
+			"keywords": [
+				"php",
+				"codeigniter",
+				"access",
+				"mysql",
+				"csharp",
+				"dotnet"
 			]
 		},
 		{
@@ -24490,12 +24995,18 @@
 					"type": "globe",
 					"url": "http://ppdbsurabaya.net/"
 				}
+			],
+			"keywords": [
+				"php",
+				"yii",
+				"mysql",
+				"bootstrap"
 			]
 		}
 	];
 
 /***/ },
-/* 212 */
+/* 218 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -24536,7 +25047,7 @@
 	];
 
 /***/ },
-/* 213 */
+/* 219 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -24554,6 +25065,17 @@
 					"type": "github",
 					"url": "https://github.com/claimgst"
 				}
+			],
+			"keywords": [
+				"ror",
+				"node",
+				"react",
+				"webpack",
+				"mocha",
+				"pg",
+				"rest",
+				"bootstrap",
+				"docker"
 			]
 		},
 		{
@@ -24571,6 +25093,16 @@
 					"type": "github",
 					"url": "https://github.com/team-expert"
 				}
+			],
+			"keywords": [
+				"ror",
+				"pg",
+				"rake",
+				"gmaps-api",
+				"rest",
+				"bootstrap",
+				"docker",
+				"azure"
 			]
 		},
 		{
@@ -24587,6 +25119,16 @@
 					"type": "github",
 					"url": "https://bitbucket.org/plummy/rhsystem"
 				}
+			],
+			"keywords": [
+				"ror",
+				"pg",
+				"rspec",
+				"capybara",
+				"cf",
+				"elasticsearch",
+				"docker",
+				"git"
 			]
 		},
 		{
@@ -24598,7 +25140,15 @@
 				"Working remotely as main developer to provide software development and database design.",
 				"Stack: C# .NET, NHibernate, MySQL, Trello, Bitbucket"
 			],
-			"type": "commercial"
+			"type": "commercial",
+			"keywords": [
+				"csharp",
+				"dotnet",
+				"nhibernate",
+				"mysql",
+				"trello",
+				"bitbucket"
+			]
 		},
 		{
 			"title": "Academic Reporting System",
@@ -24615,6 +25165,16 @@
 					"type": "globe",
 					"url": "http://its.ac.id/"
 				}
+			],
+			"keywords": [
+				"php",
+				"ci",
+				"hierarchical-mvc",
+				"mssql",
+				"jquery",
+				"highcharts",
+				"bootstrap",
+				"git"
 			]
 		},
 		{
@@ -24635,6 +25195,14 @@
 					"type": "android",
 					"url": "https://github.com/spondbob/replace/tree/master/client"
 				}
+			],
+			"keywords": [
+				"python",
+				"django",
+				"mysql",
+				"android",
+				"rest",
+				"git"
 			]
 		},
 		{
@@ -24651,6 +25219,13 @@
 					"type": "globe",
 					"url": "http://ilaluya.eamca.com/"
 				}
+			],
+			"keywords": [
+				"php",
+				"ci",
+				"twitter-api",
+				"gmaps-api",
+				"fushion-table"
 			]
 		},
 		{
@@ -24665,13 +25240,19 @@
 			"type": "univerity",
 			"links": [
 				{
-					"type": "android",
-					"url": "https://github.com/spondbob/bluetooth"
-				},
-				{
 					"type": "github",
 					"url": "https://github.com/spondbob/bluetoothAttendance"
+				},
+				{
+					"type": "android",
+					"url": "https://github.com/spondbob/bluetooth"
 				}
+			],
+			"keywords": [
+				"android",
+				"php",
+				"ci",
+				"mysql"
 			]
 		},
 		{
@@ -24689,6 +25270,13 @@
 					"type": "github",
 					"url": "https://github.com/aldoalase/nusantara-card-battle"
 				}
+			],
+			"keywords": [
+				"csharp",
+				"dotnet",
+				"fluentnhibernate",
+				"linq",
+				"mysql"
 			]
 		},
 		{
@@ -24705,6 +25293,12 @@
 					"type": "globe",
 					"url": "http://riset.ajk.if.its.ac.id/apps/"
 				}
+			],
+			"keywords": [
+				"php",
+				"ci",
+				"grocery-crud",
+				"mysql"
 			]
 		},
 		{
@@ -24726,6 +25320,13 @@
 					"type": "github",
 					"url": "https://github.com/spondbob/carikos"
 				}
+			],
+			"keywords": [
+				"php",
+				"ci",
+				"mysql",
+				"jquery",
+				"gmaps-api"
 			]
 		},
 		{
@@ -24742,6 +25343,14 @@
 					"type": "globe",
 					"url": "http://endeavour.eamca.com/"
 				}
+			],
+			"keywords": [
+				"php",
+				"js",
+				"jquery",
+				"ajax",
+				"css",
+				"mysql"
 			]
 		},
 		{
@@ -24759,12 +25368,19 @@
 					"type": "globe",
 					"url": "http://click.eamca.com/"
 				}
+			],
+			"keywords": [
+				"php",
+				"html",
+				"css",
+				"mysql",
+				"flash"
 			]
 		}
 	];
 
 /***/ },
-/* 214 */
+/* 220 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -24782,6 +25398,11 @@
 					"type": "globe",
 					"url": "http://rubyconf.org.au/2015"
 				}
+			],
+			"keywords": [
+				"ruby",
+				"ror",
+				"rspec"
 			]
 		},
 		{
@@ -24802,7 +25423,7 @@
 	];
 
 /***/ },
-/* 215 */
+/* 221 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -24830,7 +25451,7 @@
 	];
 
 /***/ },
-/* 216 */
+/* 222 */
 /***/ function(module, exports) {
 
 	module.exports = [
