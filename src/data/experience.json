@@ -21,7 +21,8 @@
         "type": "apple",
         "url": "https://appsto.re/au/Fna4bb.i"
       }
-    ]
+    ],
+    "keywords": ["ruby", "ror", "bs", "jquery", "pg", "linux", "docker", "slack", "rest"]
   },
   {
     "title": "Co Founder",
@@ -45,7 +46,8 @@
         "type": "github",
         "url": "https://github.com/plummy"
       }
-    ]
+    ],
+    "keywords": ["ruby", "ror", "docker", "slack", "trello"]
   },
   {
     "title": "Laboratory Administrator",
@@ -64,7 +66,8 @@
         "type": "globe",
         "url": "http://ajk.if.its.ac.id/"
       }
-    ]
+    ],
+    "keywords": ["php", "ci", "mysql", "linux"]
   },
   {
     "title": "Assistant/Tutor",
@@ -84,7 +87,8 @@
         "type": "globe",
         "url": "http://if.its.ac.id/en/"
       }
-    ]
+    ],
+    "keywords": ["python"]
   },
   {
     "title": "Internship",
@@ -103,7 +107,8 @@
         "type": "globe",
         "url" : "http://www.pln.co.id/"
       }
-    ]
+    ],
+    "keywords": ["php", "codeigniter", "access", "mysql", "csharp", "dotnet"]
   },
   {
     "title": "Web Developer",
@@ -123,6 +128,7 @@
         "type": "globe",
         "url": "http://ppdbsurabaya.net/"
       }
-    ]
+    ],
+    "keywords": ["php", "yii", "mysql", "bootstrap"]
   }
 ]

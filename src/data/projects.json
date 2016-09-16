@@ -15,7 +15,8 @@
         "type": "github",
         "url": "https://github.com/claimgst"
       }
-    ]
+    ],
+    "keywords": ["ror", "node", "react", "webpack", "mocha", "pg", "rest", "bootstrap", "docker"]
   },
   {
     "title": "VicRun",
@@ -34,7 +35,8 @@
         "type": "github",
         "url": "https://github.com/team-expert"
       }
-    ]
+    ],
+    "keywords": ["ror", "pg", "rake", "gmaps-api", "rest", "bootstrap", "docker", "azure"]
   },
   {
     "title": "RHSystem",
@@ -52,7 +54,8 @@
         "type": "github",
         "url": "https://bitbucket.org/plummy/rhsystem"
       }
-    ]
+    ],
+    "keywords": ["ror", "pg", "rspec", "capybara", "cf", "elasticsearch", "docker", "git"]
   },
   {
     "title": "POS Application",
@@ -64,7 +67,8 @@
       "Working remotely as main developer to provide software development and database design.",
       "Stack: C# .NET, NHibernate, MySQL, Trello, Bitbucket"
     ],
-    "type": "commercial"
+    "type": "commercial",
+    "keywords": ["csharp", "dotnet", "nhibernate", "mysql", "trello", "bitbucket"]
   },
   {
     "title": "Academic Reporting System",
@@ -83,7 +87,8 @@
         "type": "globe",
         "url": "http://its.ac.id/"
       }
-    ]
+    ],
+    "keywords": ["php", "ci", "hierarchical-mvc", "mssql", "jquery", "highcharts", "bootstrap", "git"]
   },
   {
     "title": "RePlace",
@@ -105,7 +110,8 @@
         "type": "android",
         "url": "https://github.com/spondbob/replace/tree/master/client"
       }
-    ]
+    ],
+    "keywords": ["python", "django", "mysql", "android", "rest", "git"]
   },
   {
     "title": "Traffic Density From Twitter",
@@ -123,7 +129,8 @@
         "type": "globe",
         "url": "http://ilaluya.eamca.com/"
       }
-    ]
+    ],
+    "keywords": ["php", "ci", "twitter-api", "gmaps-api", "fushion-table"]
   },
   {
     "title": "Class Attendance",
@@ -146,7 +153,8 @@
         "type": "android",
         "url": "https://github.com/spondbob/bluetooth"
       }
-    ]
+    ],
+    "keywords": ["android", "php", "ci", "mysql"]
   },
   {
     "title": "Nusantara Card Battle",
@@ -165,7 +173,8 @@
         "type": "github",
         "url": "https://github.com/aldoalase/nusantara-card-battle"
       }
-    ]
+    ],
+    "keywords": ["csharp", "dotnet", "fluentnhibernate", "linq", "mysql"]
   },
   {
     "title": "Laboratory Website",
@@ -183,7 +192,8 @@
         "type": "globe",
         "url": "http://riset.ajk.if.its.ac.id/apps/"
       }
-    ]
+    ],
+    "keywords": ["php", "ci", "grocery-crud", "mysql"]
   },
   {
     "title": "CariKos",
@@ -206,7 +216,8 @@
         "type": "github",
         "url": "https://github.com/spondbob/carikos"
       }
-    ]
+    ],
+    "keywords": ["php", "ci", "mysql", "jquery", "gmaps-api"]
   },
   {
     "title": "Endeavour in The World",
@@ -224,7 +235,8 @@
         "type": "globe",
         "url": "http://endeavour.eamca.com/"
       }
-    ]
+    ],
+    "keywords": ["php", "js", "jquery", "ajax", "css", "mysql"]
   },
   {
     "title": "CLICK",
@@ -243,6 +255,7 @@
         "type": "globe",
         "url": "http://click.eamca.com/"
       }
-    ]
+    ],
+    "keywords": ["php", "html", "css", "mysql", "flash"]
   }
 ]

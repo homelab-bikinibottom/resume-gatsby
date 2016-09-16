@@ -15,7 +15,8 @@
         "type": "globe",
         "url": "http://rubyconf.org.au/2015"
       }
-    ]
+    ],
+    "keywords": ["ruby", "ror", "rspec"]
   },
   {
     "title": "Volunteer",
