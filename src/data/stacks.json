@@ -2,7 +2,7 @@
   "backend":
   {
     "title": "Back-end",
-    "description": "Languages and frameworks",
+    "description": "Languages and frameworks.",
     "items":
     [
       {
@@ -24,6 +24,10 @@
       {
         "keys": ["java"],
         "names": ["Java"]
+      },
+      {
+        "keys": ["node", "meteor"],
+        "names": ["NodeJS", "Meteor"]
       }
     ]
   },
@@ -42,32 +46,40 @@
         "names": ["Javascript", "CoffeeScript", "jQuery"]
       },
       {
-        "keys": ["es6", "react", "redux", "node", "mocha", "chai"],
-        "names": ["ES2015", "ReactJS", "Redux", "Node.js", "Mocha", "Chai"]
+        "keys": ["es6", "react", "redux", "mocha", "chai", "webpack"],
+        "names": ["ES6", "React", "Redux", "Mocha", "Chai", "Webpack"]
       }
     ]
   },
   "supports":
   {
-    "title": "Supports",
-    "description": "Databases, operating systems, and tools.",
+    "title": "Tools",
+    "description": "DB, project management and deployment.",
     "items":
     [
       {
-        "keys": ["mysql", "pg", "mongo"],
-        "names": ["MySQL", "PostgreSQL", "MongoDB"]
+        "keys": ["mysql", "pg", "cockroachdb", "mongo"],
+        "names": ["MySQL", "PostgreSQL", "CockroachDB", "MongoDB"]
       },
       {
         "keys": ["windows", "osx", "linux"],
-        "names": ["Windows", "OS X", "Linux (Debian, Ubuntu, ArchLinux and openSUSE)"]
+        "names": ["Windows", "OS X", "Ubuntu, ArchLinux and openSUSE"]
       },
       {
-        "keys": ["docker", "slack", "trello", "webpack", "travis"],
-        "names": ["Docker", "Slack", "Trello", "Webpack", "Travis CI"]
+        "keys": ["trello", "jira"],
+        "names": ["Trello", "Jira"]
       },
       {
-        "keys": ["android", "rest"],
-        "names": ["Android Development", "RESTful API"]
+        "keys": ["android", "travis"],
+        "names": ["Android", "Travis CI"]
+      },
+      {
+        "keys": ["rest", "graphql"],
+        "names": ["RESTful API", "Graphql"]
+      },
+      {
+        "keys": ["docker", "gcp"],
+        "names": ["Docker", "Google Cloud Platform"]
       }
     ]
   }

@@ -11,6 +11,9 @@ class DevelopmentStacks extends Component {
         <div className="row">
           <div className="col-lg-12">
             <h2 id="development-stacks">Development Stacks</h2>
+            <p className="lead">
+              Select stacks to filter related experience and projects.
+            </p>
           </div>
         </div>
         <div className="row">

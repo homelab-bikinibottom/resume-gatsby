@@ -16,7 +16,7 @@
         "url": "https://github.com/claimgst"
       }
     ],
-    "keywords": ["ror", "node", "react", "webpack", "mocha", "pg", "rest", "bootstrap", "docker"]
+    "keywords": ["ror", "node", "react", "webpack", "mocha", "pg", "rest", "bootstrap", "docker", "travis"]
   },
   {
     "title": "VicRun",

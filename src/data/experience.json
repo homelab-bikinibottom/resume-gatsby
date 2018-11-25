@@ -1,5 +1,31 @@
 [
   {
+    "title": "Full-stack Developer",
+    "subTitle": "Pozible",
+    "date": "August 2016 - current",
+    "descriptions":
+    [
+      "Leading a major project to redesign whole UI to introduce new services and experience.",
+      "Lead an infrastructure work to decouple monolithic system into microservices with client-server approach (Kubernetes VS Cloud Functions & CDN).",
+      "Lead a side project with focus on mobile first experience for an ecommerce application.",
+      "Leverage Jira as a main tool to plan and manage projects.",
+      "Managing and planning development pipeline and reporting to CTO",
+      "Adopting 2-weeks agile sprint in day-to-day development practices for Pozible and Base.",
+      "As a full-stack developer, mainly working with Javascript stack such as Node JS, Meteor, React, Redux, and Mongo DB. And also Python to run cron jobs and email services.",
+      "Responsible for maintenance and deployment on Google Cloud Platform with Kubernetes and Docker containers for staging and production build.",
+      "Developed Birchal's backend and API services."
+    ],
+    "type": "professional",
+    "links":
+    [
+      { 
+        "type": "globe",
+        "url": "https://www.pozible.com"
+      }
+    ],
+    "keywords": ["node", "meteor", "graphql", "mongo", "es6", "webpack", "react", "redux", "js", "linux", "agile", "jira", "gcp", "python", "cockroachdb", "redis"]
+  },
+  {
     "title": "Industry Experience",
     "subTitle": "Monash University & MYOB",
     "date": "March - May 2016",
@@ -22,7 +48,7 @@
         "url": "https://appsto.re/au/Fna4bb.i"
       }
     ],
-    "keywords": ["ruby", "ror", "bs", "jquery", "pg", "linux", "docker", "slack", "rest"]
+    "keywords": ["ruby", "ror", "bs", "jquery", "pg", "linux", "docker", "rest", "cockroachdb", "redis"]
   },
   {
     "title": "Co Founder",
@@ -35,7 +61,7 @@
       "Successfully delivered first product-on-request to client in mid-2014.",
       "Developed skills in project management, founding start-up, Ruby on Rails, and DevOps."
     ],
-    "type": "commercial",
+    "type": "professional",
     "links":
     [
       {
@@ -47,7 +73,7 @@
         "url": "https://github.com/plummy"
       }
     ],
-    "keywords": ["ruby", "ror", "docker", "slack", "trello"]
+    "keywords": ["ruby", "ror", "docker", "trello", "cockroachdb", "redis"]
   },
   {
     "title": "Laboratory Administrator",
@@ -100,7 +126,7 @@
       "Process the data in Access using a C#.NET-based application then export it to MySQL and display it as a graphical trend on a CodeIgniter-based website.",
       "Discuss and collaborate with the IT Department for design and implementation of the system to make sure its compatibility with existing systems."
     ],
-    "type": "commercial",
+    "type": "professional",
     "links":
     [
       {
@@ -121,7 +147,7 @@
       "Work agile with database and network engineers to deploy new features on distributed servers.",
       "Working casually during the semester and did a similar project for the city of Sidoarjo in 2010."
     ],
-    "type": "commercial",
+    "type": "professional",
     "links":
     [
       {

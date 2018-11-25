@@ -32,9 +32,9 @@ class SectionItem extends Component {
         className = "info"
         label = "Personal"
         break;
-      case "commercial":
+      case "professional":
         className = "success"
-        label = "Commercial"
+        label = "Professional"
         break;
       case "competition":
         className = "secondary"

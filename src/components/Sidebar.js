@@ -28,7 +28,7 @@ class Sidebar extends PureComponent {
         <div className="card text-white bg-dark mb-3">
           <div className="card-body">
             <h5 className="card-title">Rizky Noor Ichwan</h5>
-            <p className="card-text">Web developer enthusiast based in Melbourne, Australia.</p>
+            <p className="card-text">Agile driven, determined and enthusiast developer based in Melbourne.</p>
             <a href="http://github.eamca.com" className="card-link" target="_blank" alt="GitHub page">
               <i className="fa fa-github fa-2x"></i>
             </a>
