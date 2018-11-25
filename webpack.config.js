@@ -1,38 +1,35 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/template.html',
-  filename: __dirname + '/index.html',
-  inject: 'body'
-});
+const path = require('path')
+
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  devServer: {
+    contentBase: './docs',
+    historyApiFallback: {
+      index: 'index.html'
+    },
+    host: '0.0.0.0',
+    port: 8080
+  },
   entry: [
     './src/index.js'
   ],
   output: {
-    filename: "index_bundle.js",
-    path: __dirname
+    path: path.join(__dirname, 'docs'),
+    publicPath: '/'
   },
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: "babel-loader"
-    },
-    {
-      test: /\.json$/,
-      loader: "json"
-    }]
+    rules: [
+      {
+        test: /^(?!.*\.(spec|test)\.js$).*\.js$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
+      }
+    ]
   },
-  plugins: [HTMLWebpackPluginConfig],
-  watchOptions: {
-    poll: 1000 //https://github.com/webpack/webpack-dev-server/issues/143#issuecomment-219147351
-  },
-  devServer: {
-    port: 8080,
-    historyApiFallback: {
-      // http://jaketrent.com/post/pushstate-webpack-dev-server/
-      index: __dirname + '/index.html'
-    }
-  }
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'public/template.html'
+    })
+  ]
 }

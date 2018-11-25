@@ -6,7 +6,7 @@ class Jumbotron extends Component {
       <div className="row">
         <div className="col-lg-12">
           <div className="jumbotron">
-            <h1 className="display-3" id="greeting-message" style={{color:'#eceeef'}}>Hello,</h1>
+            <h1 className="display-3" id="greeting-message">Hello,</h1>
           </div>
         </div>
       </div>

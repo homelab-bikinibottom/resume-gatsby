@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import SectionItem from './SectionItem';
 
 class Section extends Component {
@@ -20,12 +20,6 @@ class Section extends Component {
       </div>
     )
   }
-}
-
-Section.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  data: PropTypes.array.isRequired
 }
 
 export default Section;

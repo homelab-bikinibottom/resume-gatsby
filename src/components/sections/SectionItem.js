@@ -37,12 +37,12 @@ class SectionItem extends Component {
         label = "Commercial"
         break;
       case "competition":
-        className = "default"
+        className = "secondary"
         label = "Competition"
         break;
     }
     return(
-        <span className={"tag tag-" + className}>{label}</span>
+        <span className={"badge badge-" + className}>{label}</span>
     )
   }
 

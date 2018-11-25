@@ -1,4 +1,4 @@
-import React, { Component, PropTypes} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import stacksData from "../../../data/stacks"
@@ -40,10 +40,6 @@ const mapStateToProps = function(state, ownProps) {
   return {
     filters
   }
-}
-
-DevelopmentStacks.propTypes = {
-  handleSetFilters: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps)(DevelopmentStacks);

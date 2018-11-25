@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 class ListItem extends Component {
   handleOnClick(e, keys) {
@@ -28,11 +28,6 @@ class ListItem extends Component {
       </div>
     )
   }
-}
-
-ListItem.propTypes = {
-  data: PropTypes.object.isRequired,
-  handleSetFilters: PropTypes.func.isRequired
 }
 
 export default ListItem

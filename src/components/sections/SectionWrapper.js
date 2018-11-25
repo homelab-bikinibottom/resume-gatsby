@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Section from './Section';
 import * as action from '../../actions/sectionAction';
@@ -46,11 +46,6 @@ const mapStateToProps = function(state, ownProps) {
           ? all_data.find( (item) => { return item.section === ownProps.id }).data
           : []
   }; 
-}
-
-SectionWrapper.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
 }
 
 export default connect(mapStateToProps)(SectionWrapper);

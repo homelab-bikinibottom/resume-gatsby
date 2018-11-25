@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 class FaIcon extends Component {
   render() {
@@ -6,11 +6,6 @@ class FaIcon extends Component {
       <i className={"fa fa-border fa-lg fa-" + this.props.type}></i>
     )
   }
-}
-
-
-FaIcon.propTypes = {
-  type: PropTypes.string.isRequired
 }
 
 export default FaIcon;
