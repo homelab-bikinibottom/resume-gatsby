@@ -40,29 +40,21 @@ class SectionItem extends Component {
         className = "secondary"
         label = "Competition"
         break;
+      default:
+        break;
     }
     return(
-        <span className={"badge badge-" + className}>{label}</span>
+      <span className={"badge bg-" + className}>{label}</span>
     )
   }
 
   render() {
     return (
       <div className="row">
-        <div className="col-lg-2">
+        <div className="col-lg-2 d-flex flex-column pt-2">
           { this.props.data.type ? this.type() : "" }
-          <p>{this.props.data.date}</p>
-          {
-            this.props.data.hasOwnProperty('links')
-            ? this.props.data.links.map(function(link, key) {
-                return (
-                  <a href={link.url} key={key} target="_blank">
-                    <FaIcon type={link.type} />
-                  </a>
-                )
-              })
-            : ""
-          }
+          <small>{this.props.data.date.human}</small>
+          <URLs {...this.props} />
         </div>
         <div className="col-lg-10">
           { this.props.data.title ? this.title() : '' }
@@ -71,6 +63,21 @@ class SectionItem extends Component {
       </div>
     )
   }
+}
+
+function URLs({ data }) {
+  if (!data.hasOwnProperty('links')) return null
+  return (
+      <div className="d-flex">
+        {
+          data.links.map((link, key) => (
+            <a href={link.url} key={key} target="_blank" rel="noreferrer" className="mr-2 link-secondary">
+              <FaIcon type={link.type} />
+            </a>
+          ))
+        }
+      </div>
+  )
 }
 
 export default SectionItem;

@@ -1,35 +1,29 @@
 {
-  "name": "resume",
-  "version": "1.0.0",
-  "description": "Node.js on Docker",
-  "author": "First Last <first.last@example.com>",
-  "main": "server.js",
+  "name": "@eamca/resume",
+  "private": true,
+  "description": "Resume for Rizky Noor Ichwan",
+  "version": "2.0.0",
+  "license": "0BSD",
   "scripts": {
-    "build": "NODE_ENV=production webpack --mode production",
-    "deploy": "yarn build && git add . && git commit -m 'publish' && git push origin master",
-    "start": "webpack-dev-server --mode development --hot"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-redux": "^5.1.1",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.1.0",
-    "styled-components": "^4.1.1"
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^5.0.0-alpha1",
+    "gatsby": "^2.24.11",
+    "popper.js": "^1.16.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/preset-env": "^7.1.6",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "babel-plugin-styled-components": "^1.8.0",
-    "css-loader": "^1.0.1",
-    "html-webpack-plugin": "^3.2.0",
-    "json-loader": "^0.5.7",
-    "webpack": "^4.26.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "prettier": "2.0.5"
   },
   "repository": {
     "type": "git",
@@ -42,7 +36,6 @@
     "ichwan",
     "react"
   ],
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/spondbob/resume/issues"
   },

@@ -2,7 +2,9 @@
   {
     "title": "Volunteer",
     "subTitle": "RubyConf Australia",
-    "date": "4-7 Feb 2015",
+    "date": {
+      "human": "4-7 Feb 2015"
+    },
     "descriptions":
     [
       "Volunteering for its annual event of workshops, conference, and social event.",
@@ -21,7 +23,9 @@
   {
     "title": "Volunteer",
     "subTitle": "YOW! Conference Melbourne",
-    "date": "3-5 Dec 2014",
+    "date": {
+      "human": "3-5 Dec 2014"
+    },
     "descriptions":
     [
       "Working in a team to help attendees with general enquiries, organise and locating name tags for registration, collecting feedback for speakers, and guiding attendees through the venue.",

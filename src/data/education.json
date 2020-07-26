@@ -2,7 +2,9 @@
   {
     "title": "Master of Information Technology Professional/Master of Business Information Systems Professional",
     "subTitle": "Monash University, Australia",
-    "date": "2014 - 2016",
+    "date": {
+      "human": "2014 - 2016"
+    },
     "descriptions":
     [
       "Awarded Faculty of IT International Merit Scholarship in 2014.",
@@ -19,7 +21,9 @@
   {
     "title": "Bachelor of Informatics",
     "subTitle": "Institut Teknologi Sepuluh Nopember, Indonesia",
-    "date": "2009 - 2013",
+    "date": {
+      "human": "2009 - 2013"
+    },
     "descriptions":
     [
       "Minor: Network Centric Computing",

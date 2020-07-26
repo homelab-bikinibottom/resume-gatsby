@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FaIcon extends Component {
-  render() {
-    return (
-      <i className={"fa fa-border fa-lg fa-" + this.props.type}></i>
-    )
-  }
+export default function FaIcon({ type }) {
+  const style = ['android', 'github'].includes(type) ? 'fab' : 'fa'
+  return (
+    <span className={style + " fa-" + type}></span>
+  )
 }
-
-export default FaIcon;

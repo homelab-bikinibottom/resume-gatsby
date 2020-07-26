@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Jumbotron extends Component {
-  render() {
-    return (
-      <div className="row">
-        <div className="col-lg-12">
-          <div className="jumbotron">
-            <h1 className="display-3" id="greeting-message">Hello,</h1>
-          </div>
+export default function Jumbotron() {
+  return (
+    <div className="row mb-5">
+      <div className="col-lg-12">
+        <div className="bg-light p-5">
+          <h1 className="display-3" id="greeting-message">Hello,</h1>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
-
-export default Jumbotron;

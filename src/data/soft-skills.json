@@ -1,14 +1,18 @@
 [
   {
-    "date": "Teamwork",
+    "date": {
+      "human": "Teamwork"
+    },
     "descriptions":
     [
-      "Involved in various team-based works for projects, organisation, and volunteer demonstrate the ability to work as a team while still being able to accomplish individual tasks.",
-      "Apply agile practices for software development in a team to quickly adapting changes."
+      "Involvement in various team-based projects, organisation, and volunteer demonstrate the ability to work as a team while still being able to accomplish individual tasks.",
+      "Apply agile practices for software development in a team to quickly adapt changes."
     ]
   },
   {
-    "date": "Problem solver",
+    "date": {
+      "human": "Problem solver"
+    },
     "descriptions":
     [
       "The role as web developers, intern, and Industry Experience proven the ability to apply critical thinking to tackle user challenges in a professional manner.",
@@ -16,11 +20,13 @@
     ]
   },
   {
-    "date": "Passionate",
+    "date": {
+      "human": "Passionate"
+    },
     "descriptions":
     [
-      "Quickly learn and adopt new technology that adequate for user specifications.",
-      "Keen on to explore new emerging technologies and methodologies to advance with current fast-paced development."
+      "Eager to learn and adopt new technology that adequate to user specifications.",
+      "Keen to explore new emerging technology and methodologies to advance with current fast-paced development."
     ]
   }
 ]

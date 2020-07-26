@@ -2,30 +2,31 @@
   "backend":
   {
     "title": "Back-end",
-    "description": "Languages and frameworks.",
+    "description": "Languages and frameworks",
     "items":
     [
       {
+        "stack": "Ruby",
         "keys": ["ruby", "ror", "rspec"],
         "names": ["Ruby", "Ruby on Rails", "RSpec"]
       },
       {
+        "stack": "PHP",
         "keys": ["php", "ci", "yii"],
         "names": ["PHP", "CodeIgniter", "Yii"]
       },
       {
+        "stack": "Python",
         "keys": ["python", "django"],
         "names": ["Python", "Django"]
       },
       {
+        "stack": ".NET",
         "keys": ["csharp", "dotnet"],
         "names": ["C#", ".NET"]
       },
       {
-        "keys": ["java"],
-        "names": ["Java"]
-      },
-      {
+        "stack": "NodeJs",
         "keys": ["node", "meteor"],
         "names": ["NodeJS", "Meteor"]
       }
@@ -34,52 +35,61 @@
   "frontend":
   {
     "title": "Front-end",
-    "description": "Scripting and styling.",
+    "description": "Scripting and styling",
     "items":
     [
       {
-        "keys": ["html5", "css", "bootstrap"],
-        "names": ["HTML5", "CSS", "Bootstrap"]
+        "stack": "Cascading Style Sheets",
+        "keys": ["styled-components", "bootstrap", "chakra-ui"],
+        "names": ["styled-components", "Bootstrap", "chakra-ui"]
       },
       {
-        "keys": ["js", "cf", "jquery"],
-        "names": ["Javascript", "CoffeeScript", "jQuery"]
+        "stack": "JavaScript",
+        "keys": ["es6", "ts", "jquery"],
+        "names": ["ES6", "TypeScript", "jQuery"]
       },
       {
-        "keys": ["es6", "react", "redux", "mocha", "chai", "webpack"],
-        "names": ["ES6", "React", "Redux", "Mocha", "Chai", "Webpack"]
+        "stack": "React Ecosystem",
+        "keys": ["react", "redux", "webpack", "gatsby"],
+        "names": ["React", "Redux", "Webpack", "Gatsby"]
       }
     ]
   },
   "supports":
   {
-    "title": "Tools",
-    "description": "DB, project management and deployment.",
+    "title": "Tooling",
+    "description": "DB, project management and deployment",
     "items":
     [
       {
+        "stack": "Database",
         "keys": ["mysql", "pg", "cockroachdb", "mongo"],
         "names": ["MySQL", "PostgreSQL", "CockroachDB", "MongoDB"]
       },
       {
-        "keys": ["windows", "osx", "linux"],
-        "names": ["Windows", "OS X", "Ubuntu, ArchLinux and openSUSE"]
+        "stack": "Project Management",
+        "keys": ["trello", "jira", "github"],
+        "names": ["Trello", "Jira", "GitHub"]
       },
       {
-        "keys": ["trello", "jira"],
-        "names": ["Trello", "Jira"]
+        "stack": "Mobile",
+        "keys": ["android"],
+        "names": ["Android"]
       },
       {
-        "keys": ["android", "travis"],
-        "names": ["Android", "Travis CI"]
+        "stack": "Communication",
+        "keys": ["rest", "graphql", "pubsub"],
+        "names": ["REST API", "GraphQL", "PubSub"]
       },
       {
-        "keys": ["rest", "graphql"],
-        "names": ["RESTful API", "Graphql"]
+        "stack": "Deployment",
+        "keys": ["docker", "kubernetes", "serverless"],
+        "names": ["Docker", "Kubernetes", "Serverless"]
       },
       {
-        "keys": ["docker", "gcp"],
-        "names": ["Docker", "Google Cloud Platform"]
+        "stack": "Cloud PAAS",
+        "keys": ["gcp", "heroku", "netlify"],
+        "names": ["Google Cloud Platform", "Heroku", "Netlify"]
       }
     ]
   }

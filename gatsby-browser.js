@@ -1,0 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '@fortawesome/fontawesome-free/css/solid.min.css'
+import '@fortawesome/fontawesome-free/css/brands.min.css'
+import './src/styles/global.css'
+import './src/styles/app.css'
+import './src/styles/icons.css'

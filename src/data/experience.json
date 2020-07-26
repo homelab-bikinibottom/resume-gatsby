@@ -2,7 +2,9 @@
   {
     "title": "Full-stack Developer",
     "subTitle": "Pozible",
-    "date": "August 2016 - current",
+    "date": {
+      "human": "August 2016 - current"
+    },
     "descriptions":
     [
       "Leading a major project to redesign whole UI to introduce new services and experience.",
@@ -21,6 +23,10 @@
       { 
         "type": "globe",
         "url": "https://www.pozible.com"
+      },
+      { 
+        "type": "github",
+        "url": "https://github.com/pozible"
       }
     ],
     "keywords": ["node", "meteor", "graphql", "mongo", "es6", "webpack", "react", "redux", "js", "linux", "agile", "jira", "gcp", "python", "cockroachdb", "redis"]
@@ -28,7 +34,9 @@
   {
     "title": "Industry Experience",
     "subTitle": "Monash University & MYOB",
-    "date": "March - May 2016",
+    "date": {
+      "human": "March - May 2016"
+    },
     "descriptions":
     [
       "Working collaboratively with an agile team to identify an issue and deliver the solution in time.",
@@ -53,7 +61,9 @@
   {
     "title": "Co Founder",
     "subTitle": "plummy",
-    "date": "2014 - 2016",
+    "date": {
+      "human": "2014 - 2016"
+    },
     "descriptions":
     [
       "A digital online platform to collaborate, innovate, and realizing ideas within its small team.",
@@ -78,7 +88,9 @@
   {
     "title": "Laboratory Administrator",
     "subTitle": "Faculty of IT",
-    "date": "2011 - 2013",
+    "date": {
+      "human": "2011 - 2013"
+    },
     "descriptions":
     [
       "Lab administrator at Computer Architecture and Network Laboratory.",
@@ -98,7 +110,9 @@
   {
     "title": "Assistant/Tutor",
     "subTitle": "Faculty of IT",
-    "date": "2011 - 2013",
+    "date": {
+      "human": "2011 - 2013"
+    },
     "descriptions":
     [
       "Assitant lecturer for Distributed Systems and Network Programming units.",
@@ -119,7 +133,9 @@
   {
     "title": "Internship",
     "subTitle": "PT. PLN (State Electricity Company of Indonesia)",
-    "date": "Aug - Oct 2012",
+    "date": {
+      "human": "Aug - Oct 2012"
+    },
     "descriptions":
     [
       "Developed a reporting system to monitor 7.3M customers’ electricity usage in East Java area.",
@@ -139,7 +155,9 @@
   {
     "title": "Web Developer",
     "subTitle": "City of Surabaya & Institut Teknologi Sepuluh Nopember",
-    "date": "March - June 2011",
+    "date": {
+      "human": "March - June 2011"
+    },
     "descriptions":
     [
       "Did a project of the city of Surabaya in collaboration with Institut Teknologi Sepuluh Nopember to manage online admission process for all public schools in Surabaya.",
